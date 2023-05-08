@@ -29,6 +29,7 @@ API/Other Coding:
 - Steven
 - Jen
 
+Schedule:
 - Stage 1 (Week 5-6): Web page (all pages) setup
 - Stage 2 (Week 7-8): At least: Location implemented; At Most: Location, Animal API
 - Stage 3 (Week 9-10): Polish (styling and reactive elements); If free time: Forum, Matchmaker, Meme Generator pages 
