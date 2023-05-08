@@ -1,5 +1,4 @@
-# Project Title:
-OnlyCapys
+# OnlyCapys
 
 ## Description:
 For our project, we plan to make a capybara locator to help users find capybaras near them! Users will be able to enter their location or zip code, and we will then generate a map of their area, highlighting any known capybara sightings nearby. Users will also be able to filter the results by date, location, and other criteria to find specific information. To implement this, we plan to gather information from a variety of sources, including social media platforms, wildlife organizations, and verified user submissions. In addition to the mapping, we plan to provide information on capybaras to educate users (using Animal API). The educational content will consist of articles, videos, and photos to help users learn about these fascinating creatures and their habits. If we have enough time, we will implement a forum where users can connect with other capybara enthusiasts and share their personal sightings and experiences, potentially a random capybara meme generator where users can click a button to see a random capybara meme, and more. To create our website, we plan to use Py4Web and Vue.js! Our team is also open to reducing our scope of what to implement if we run short on time. 
