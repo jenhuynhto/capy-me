@@ -542,7 +542,7 @@ ul.tags-list li[data-selected=true] {
   opacity: 1.0;
 }
 
-img {
+#onlycaps_logo {
   height: 50px;
   width: auto;
 }
