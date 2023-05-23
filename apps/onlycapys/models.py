@@ -13,3 +13,10 @@ from pydal.validators import *
 #
 # db.commit()
 #
+
+db.define_table('contact',
+                Field('fullname', requires=IS_NOT_EMPTY(), label="Full Name"),
+                Field('email', requires=IS_NOT_EMPTY(), label="E-mail"),
+                Field('message', requires=IS_NOT_EMPTY(), label="Message"))
+
+db.commit()

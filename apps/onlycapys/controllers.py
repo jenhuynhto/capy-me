@@ -28,6 +28,7 @@ Warning: Fixtures MUST be declared with @action.uses({fixtures}) else your app w
 from py4web import action, request, abort, redirect, URL
 from yatl.helpers import A
 from .common import db, session, T, cache, auth, logger, authenticated, unauthenticated, flash
+from py4web.utils.form import Form, FormStyleBulma
 import requests
 
 
@@ -38,11 +39,15 @@ def index():
     #message = T("Hello {first_name}".format(**user) if user else "Hello")
     #actions = {"allowed_actions": auth.param.allowed_actions}
 
-    name = 'capybara'
-    api_url = 'https://api.api-ninjas.com/v1/animals?name={}'.format(name)
-    response = requests.get(api_url, headers={'X-Api-Key': 'BvaoaJ22jGIP5JvtVnGW/Q==3Yl87cuMQIHgAN7D'})
-    if response.status_code == requests.codes.ok:
-        print(response.text)
-    else:
-        print("Error:", response.status_code, response.text)
-    return dict()
+    #name = 'capybara'
+    #api_url = 'https://api.api-ninjas.com/v1/animals?name={}'.format(name)
+    #response = requests.get(api_url, headers={'X-Api-Key': 'BvaoaJ22jGIP5JvtVnGW/Q==3Yl87cuMQIHgAN7D'})
+    #if response.status_code == requests.codes.ok:
+    #    print(response.text)
+    #else:
+    #    print("Error:", response.status_code, response.text)
+
+    form = Form(db.contact, csruf_session=session, formstyle=FormStyleBulma)
+    if form.accepted:
+        redirect(URL('index'))
+    return dict(form=form)
