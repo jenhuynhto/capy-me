@@ -541,8 +541,3 @@ ul.tags-list li {
 ul.tags-list li[data-selected=true] {
   opacity: 1.0;
 }
-
-img {
-  height: 50px;
-  width: auto;
-}
