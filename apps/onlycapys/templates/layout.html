@@ -20,7 +20,7 @@
       <nav class="white">
         <!-- Logo -->
         <a href="[[=URL('index')]]">
-          <b><img id="onlycaps_logo" src="../static/images/onlycapys_logo.png"></b>
+          <img id="onlycaps_logo" style="margin-left: 100px;" src="../static/images/onlycapys_logo.png">
         </a>
         <!-- Our Mission -->
         <a>
@@ -51,8 +51,8 @@
             </ul>
           </li>
           [[else:]]
-          <li>
-            <strong>Log In</strong>
+          <li style="margin-right: 150px;">
+            <strong>Log In <i class="fa fa-angle-right" aria-hidden="true"></i></strong>
             <ul>
               <li><a href="[[=URL('auth/register')]]">Sign up</a></li>
               <li><a href="[[=URL('auth/login')]]">Log in</a></li>
