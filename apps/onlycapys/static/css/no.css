@@ -38,7 +38,7 @@ html, body {
 }
 
 body {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   line-height: 1.8em;
   min-height: 100vh;
   display: grid;
