@@ -323,7 +323,6 @@ nav > input[type=checkbox], nav > label {
 
 @media (min-width:600px) {
   nav > * {
-    display: table-cell;
     vertical-align: middle;
   }
   nav > ul:last-child {
