@@ -27,3 +27,4 @@ CREATE TABLE "contact"(
     "message" CHAR(512)
 );
 success!
+success!
