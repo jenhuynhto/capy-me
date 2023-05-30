@@ -2,3 +2,4 @@ py4web/
 _dashboard/
 test.bat
 apps/onlycapys/test.py
+apps/onlycapys/.env
