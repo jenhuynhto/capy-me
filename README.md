@@ -25,6 +25,7 @@ API/Other Coding:
 - Austin
 - Steven
 - Alex
+- Jen
 
 Schedule:
 - Stage 1 (Week 5-6): Web page (all pages) setup
