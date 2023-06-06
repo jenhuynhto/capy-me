@@ -51,3 +51,5 @@ def index():
     if form.accepted:
         redirect(URL('index'))
     return dict(form=form)
+
+
