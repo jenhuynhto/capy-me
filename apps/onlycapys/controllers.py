@@ -53,3 +53,7 @@ def index():
     return dict(form=form)
 
 
+@action("form")
+@action.uses("Forum.html", auth, T)
+def form():
+    return dict()
