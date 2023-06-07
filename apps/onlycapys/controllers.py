@@ -30,7 +30,7 @@ from yatl.helpers import A
 from .common import db, session, T, cache, auth, logger, authenticated, unauthenticated, flash
 from py4web.utils.form import Form, FormStyleBulma
 import requests
-
+import json
 
 @action("index")
 @action.uses("index.html", auth, T)
@@ -96,6 +96,6 @@ def form():
 
 @action("alert")
 @action.uses("Alert.html", auth, T)
-def form():
+def display_facts():
+   
     return dict()
-

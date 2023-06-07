@@ -3,15 +3,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Button Example</title>
-  <script>
-    function displayMessage() {
-      alert('Hello, World!');
+  <title>Capybara Facts</title>
+  <style>
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
-  </script>
+  </style>
 </head>
 <body>
-  <h1>Button Example</h1>
-  <button onclick="displayMessage()">Click me!</button>
+  <h1>Capybara Facts</h1>
+  <button onclick="displayRandomFact()">Fact</button>
+
+  <script>
+    let facts = [];
+
+    // Fetch the facts from the API endpoint and store them in the "facts" array
+    fetch("https://api.capy.lol/v1/facts")
+      .then(response => response.json())
+      .then(data => {
+        facts = data.data;
+      })
+      .catch(error => {
+        console.error("Error loading facts:", error);
+      });
+
+    function displayRandomFact() {
+      if (facts.length === 0) {
+        alert("Facts are still loading. Please try again later.");
+        return;
+      }
+
+      // Generate a random index to select a fact from the "facts" array
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      const fact = facts[randomIndex];
+
+      // Display the random fact using the alert function
+      alert(fact);
+    }
+  </script>
 </body>
 </html>
