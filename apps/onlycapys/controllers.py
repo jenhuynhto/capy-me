@@ -46,7 +46,7 @@ def index():
     #    print(response.text)
     #else:
     #    print("Error:", response.status_code, response.text)
-
+   
     form = Form(db.contact, csruf_session=session, formstyle=FormStyleBulma)
     if form.accepted:
         redirect(URL('index'))
@@ -54,10 +54,11 @@ def index():
 
 @action("about")
 @action.uses("about.html", auth, T)
-def form():
-    return dict()
+def about():
+    return dict( about_us_url = URL('about'))
 
 @action("form")
 @action.uses("Forum.html", auth, T)
 def form():
     return dict()
+
