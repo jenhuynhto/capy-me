@@ -62,3 +62,8 @@ def about():
 def form():
     return dict()
 
+@action("alert")
+@action.uses("Alert.html", auth, T)
+def form():
+    return dict()
+
