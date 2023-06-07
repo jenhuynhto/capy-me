@@ -52,6 +52,10 @@ def index():
         redirect(URL('index'))
     return dict(form=form)
 
+@action("about")
+@action.uses("about.html", auth, T)
+def form():
+    return dict()
 
 @action("form")
 @action.uses("Forum.html", auth, T)
