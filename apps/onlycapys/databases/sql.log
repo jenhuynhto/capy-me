@@ -28,3 +28,19 @@ CREATE TABLE "contact"(
 );
 success!
 success!
+success!
+timestamp: 2023-06-07T15:42:16.723492
+CREATE TABLE "zoo"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "name" CHAR(512),
+    "address" CHAR(512),
+    "lat" CHAR(512),
+    "long" CHAR(512)
+);
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
