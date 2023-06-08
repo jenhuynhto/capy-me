@@ -52,12 +52,12 @@ def index():
         redirect(URL('index'))
     return dict(form=form)
 
+
 @action("about")
 @action.uses("about.html", auth, T)
 def about():
     return dict( about_us_url = URL('about'))
 
-import requests
 
 @action("form", method=["GET", "POST"])
 @action.uses("Forum.html", db, session, T)
@@ -99,3 +99,10 @@ def form():
 def display_facts():
    
     return dict()
+
+@action("zoos")
+@action.uses("zoos.html", auth, T)
+def zoos():
+    zoos = db(db.zoo).select(orderby=db.zoo.name)
+    print("zoos: ", zoos)
+    return dict(zoos=zoos)

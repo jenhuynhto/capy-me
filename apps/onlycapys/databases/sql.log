@@ -44,3 +44,79 @@ success!
 DELETE FROM "zoo";
 DELETE FROM sqlite_sequence WHERE name='zoo'
 success!
+timestamp: 2023-06-07T19:24:33.968961
+CREATE TABLE "userAddress"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "address" CHAR(512),
+    "created_on" TIMESTAMP,
+    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "modified_on" TIMESTAMP,
+    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "is_active" CHAR(1)
+);
+success!
+timestamp: 2023-06-07T19:24:33.979952
+ALTER TABLE "zoo" ADD "likes" CHAR(512);
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+timestamp: 2023-06-07T20:48:14.666474
+CREATE TABLE "userAddress"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "address" CHAR(512),
+    "created_on" TIMESTAMP,
+    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "modified_on" TIMESTAMP,
+    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "is_active" CHAR(1)
+);
+timestamp: 2023-06-07T20:48:55.183239
+CREATE TABLE "userAddress"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "address" CHAR(512),
+    "created_on" TIMESTAMP,
+    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "modified_on" TIMESTAMP,
+    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "is_active" CHAR(1)
+);
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
+timestamp: 2023-06-07T21:12:15.998077
+ALTER TABLE "userAddress" ADD "userid" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ;
+success!
+DELETE FROM "zoo";
+DELETE FROM sqlite_sequence WHERE name='zoo'
+success!
