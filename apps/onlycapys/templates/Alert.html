@@ -6,18 +6,68 @@
   <title>Capybara Facts</title>
   <style>
     button {
-      padding: 10px 20px;
-      font-size: 18px;
-      background-color: #4CAF50;
+      /* padding: 10px 20px; */
+      /* padding-left: 40vw; */
+      font-size: 14px;
+      background-color: #5eb0ef;
       color: white;
       border: none;
       cursor: pointer;
+      display: inline-block;
+      justify-content: center;
+      position: absolute;
+      transition:0.5s;
+    }
+    button:hover {
+      background-color: #1a77bf;
+      padding-left: 58%;
+    }
+    .screen {
+      display: flex;
+      position: relative;
+      /* width: 100vh;
+      height: 100vh; */
+      width: 100%;
+      height: auto;
+    }
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 1s ease;
+      z-index: -1;
+    }
+    .video:hover {
+        opacity: 0.5;
+    }
+    .capy {
+      color: azure;
+      font-size: 7vw;
+      text-shadow: 2px 2px black;
+      margin-left: 20vw;
+    }
+    .fact-button {
+      color: azure;
+      font-size: 3vw;
+      padding-left: 40%;
+    }
+    .texts {
+      margin-top: 20vw;
     }
   </style>
 </head>
 <body>
-  <h1>Capybara Facts</h1>
-  <button onclick="displayRandomFact()">Fact</button>
+
+  <div class="screen">
+    <video autoplay loop muted plays-inline class="video">
+        <source src="../static/images/capybara.mp4" type='video/mp4'>
+    </video>
+
+    <div class="texts">
+      <h1 class="capy">Random Capybara</h1>
+      <button onclick="displayRandomFact()" class="fact-button">Facts (Click Me!)</button>
+    </div>
+  </div>
 
   <script>
     let facts = [];
