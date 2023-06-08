@@ -56,23 +56,21 @@
   </style>
 </head>
 <body>
-  <p class="title is-1">
+  <p class="title is-2">
     Capybara Fact
   </p>  
-  <button class="button is-primary " onclick="displayRandomFact()">Fact</button>
+  <!-- image and fun fact will be here -->
+  <div class="is-centered">
+    <img id="fact-image" style="height: 60vh; width: auto" class="is-mobile" src="" alt=""/>
+    <p class="fact-text text-is-centered" id="fact-text"></p>
+  </div>
 
-  <div id="popup" class="popup">
+  <div class="buttons is-centered">
+    <button class="button is-primary" onclick="displayRandomFact()">Fact</button>
+  </div>
+
+
    
-    <div class = "box">
-      <img id="fact-image" style="height: 60vh; width: auto" class="is-mobile" src="" alt="Capybara Image" />
-    </div>
-    <div class="container">
-      <div class="box">
-        <p class="fact-text" id="fact-text"></p>
-      </div>
-      
-    </div>
-    <span class="popup-close" onclick="closePopup()">&times;</span>
   </div>
   
   <script>
@@ -104,8 +102,9 @@
       
       const randomIndex2 = Math.floor(Math.random() * 100) + 1;
       factImage.src = `https://api.capy.lol/v1/capybara/${randomIndex2}`;
+      factImage.alt="Capybara Image"
       factText.textContent = fact;
-      popup.classList.add("active");
+      // popup.classList.add("active");
     }
 
     function closePopup() {
