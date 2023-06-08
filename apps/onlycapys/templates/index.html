@@ -6,87 +6,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OnlyCapys</title>
   <link rel="stylesheet" href="css/no.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script type="module" src="./index.js"></script>
 </head>
 
 <div class="section">
-  <div class="columns is-mobile">
-    <div class="column is-half is-mobile" style="padding-top: 45px;">
+  <div class="columns is-mobile" style="padding-top: 40px;">
+    <div class="column is-half is-mobile" style="padding-top: 30px;">
       <div class="block">
-        <img id="map" style="border-radius: 20px; width:90%; height: auto; " src="../static/images/tempmap.png">
+        <img id="map" style="border-radius: 20px; width:90%; height: auto; " src="../static/images/tempmap.png" alt="Map of Santa Cruz, CA">
       </div>
-      <div>
-        <!--empty space-->
-      </div>
-      <div class="block" style="margin-top: 200px;">
+      <div class="block" style="margin-top: 325px;">
         <h1 class="title is-size-3" style="font-weight: 700;">The Capybara
         </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut cursus augue.
-          Aenean tempus pretium lectus, eu ultricies velit gravida id. Pellentesque habitant
-          morbi tristique senectus et netus et malesuada.</p>
-        <br>
-        <!--Animal API-->
+        <p>In the wetlands, only <em>one</em> remarkable creature reigns supreme — the capybara, nature's gentle giant.
+          With their impressive size, sleek body, and playful nature, these charismatic beings
+          captivate hearts.</p>
+        <!-- Fun Facts #1 and #2 -->
         <div class="columns is-mobile" style="padding-left: 10px">
           <div class="column is half is-mobile">
-            <p class="title is-size-5" style="font-weight: 700;">Fun Fact #1</p>
-            <p>Capybaras are the largest rodents in the world. </p>
+            <span class="title is-size-5" style="font-weight: 700;">Fun Fact #1</span>
+            <p>Capybaras are the largest rodents in the world! Reaching weights of up to 150lbs </p>
           </div>
           <div class="column is-mobile">
-            <p class="title is-size-5" style="font-weight: 700;">Fun Fact #2</p>
-            <p>They are semi-aquatic animals and are excellent swimmers. </p>
+            <span class="title is-size-5" style="font-weight: 700;">Fun Fact #2</span>
+            <p>Capybaras are great swimmers due to their webbed feet and streamlined bodies.</p>
           </div>
         </div>
       </div>
     </div>
 
     <div class="column is-mobile">
-      <h1 class="title is-size-3" style="font-weight: 700;">Locating Capybaras near you — easy, fast, and frictionless.
-      </h1>
-      <p>Do you ever wonder about capybaras? 
-        They may appear mysterious and out if reach at first-- 
-        but not at all if you pay them a visit!
+      <h1 class="title is-size-3" style="font-weight: 700;">Locating Capybaras near you — easy, fast, and frictionless.</h1>
+      <p>Explore a comprehensive interactive map that showcases capybara locations across the United States.
+        Whether you're longing to see one in-person out of curiousity or simply seek capybara companionship, we've got
+        you covered!
       </p>
-      <p>
-        Click the "Find Now" button, 
-        and our map will show you the location of the closest capybara to you based on your current location. 
-      </p>
-      <button class="button" style="background-color: #327bea; color: white; font-weight: 500;">
+      <h1 class="title is-size-4" style="font-weight: 700; margin-top: 40px;">Enter an address to start your capybara quest!</h1>
+      <!-- Enter address here -->
+      <form>
+        <input type="text" id="userAddress" name="userAddress" placeholder="123 Capybara Ave., Santa Cruz, CA 95060">
+
+      </form>
+      <button class="button" style="background-color: #327bea; color: white; font-weight: 500; width: 120px;" onClick="addressSubmit()">
         Find Now
-        <i class="fa fa-angle-right" aria-hidden="true"></i>
+        <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
       </button>
 
-      <div class="block" style="margin-top: 400px;">
+      <p>You inputted: <span id="result"></span></p>
+
+      <div class="block" style="margin-top: 280px;">
         <img id="capybara1" style="border-radius: 20px; height: 400px; width: auto;"
-          src="../static/images/capybara1.png">
+          src="../static/images/capybara1.png" alt="Adult Capybara with 2 Baby Capybara">
       </div>
     </div>
   </div>
-  <div class="capybara2" style="margin-top: 170px;">
-    <p class="has-text-centered"><img id="capybara2" style="border-radius: 20px;" src="../static/images/capybara2.jpeg">
+  <div class="capybara2" style="margin-top: 230px;">
+    <p class="has-text-centered"><img id="capybara2" style="border-radius: 20px;" src="../static/images/capybara2.jpeg" alt="Adult Capybara with 5 Baby Capybara">
     </p>
   </div>
 
   <div class="columns is-mobile" style="margin-top: 50px;">
     <div class="column is-one-quarter is-mobile has-text-left">
-      <p class="title is-size-5" style="font-weight: 700;">Fact 1</p>
-      <p>Native to South America, capybaras can be found in countries such as Brazil, Venezuela, Colombia, and Paraguay.</p>
+      <span class="title is-size-5" style="font-weight: 700;">Peace</span>
+      <p>Native to South America, capybaras can be found in countries such as Brazil, Venezuela, Colombia, and Paraguay.
+      </p>
     </div>
-    <div class="column is-mobile has-text-centered">
-      <p class="title is-size-5" style="font-weight: 700;">Fact 2</p>
-      <p>Capybaras are social animals and live in groups of up to 20 individuals, although larger groups have been observed.</p>
+    <div class="column is-mobile">
+      <span class="title is-size-5" style="font-weight: 700;">Resilience</span>
+      <p>Capybaras are social animals and live in groups of up to 20 individuals, although larger groups have been
+        observed.</p>
     </div>
-    <div class="column is-mobile has-text-centered">
-      <p class="title is-size-5" style="font-weight: 700;">Fact 3</p>
+    <div class="column is-mobile">
+      <span class="title is-size-5" style="font-weight: 700;">Calm</span>
       <p>Groups of capybaras are led by a dominant male, who protects the group and helps to raise the young.</p>
     </div>
-    <div class="column is-mobile has-text-centered">
-      <p class="title is-size-5" style="font-weight: 700;">Fact 4</p>
-      <p>Capybaras have webbed feet, which makes them excellent swimmers.</p>
+    <div class="column is-mobile">
+      <span class="title is-size-5" style="font-weight: 700;">Community</span>
+      <p>Capybaras are social creatures, who long for connection and a sense
+        of belonging through a community.
+        <br><br>
+        Similarly, we hope to bring together people through their love or even
+        their slight interest of Capybaras to create lifelong friendships.</p>
     </div>
   </div>
 
-  <div class="contact-form" style="margin-top: 100px;">
-    <h1 class="title is-size-3" style="font-weight: 700;">Contact Us
-    </h1>
-    [[=form]]
+  <div class="columns is-mobile" style="margin-top: 50px; margin-bottom: 15px; margin-left: 200px; margin-right: 200px;">
+    <div class="column is-half is-mobile has-text-left">
+      <div class="contact-form" style="margin-top: 30px; padding-right: 300px;">
+        <h1 class="title is-size-2" style="font-weight: 700;">Contact Us</h1>
+        [[=form]]
+      </div>
+    </div>
+    <div class="column is-mobile has-text-left" style="margin-top: 155px;">
+      <span class="title is-size-4" style="font-weight: 700;">Contact</span>
+      <br>
+      <span>onlycapys@gmail.com</span>
+      <br>
+      <br>
+      <span class="title is-size-4" style="font-weight: 700; ">Based In</span>
+      <br>
+      <span>California</span>
+    </div>
   </div>
 </div>
+
+[[block page_scripts]]
+<script>
+  function addressSubmit() {
+    document.getElementById("result").innerHTML = document.getElementById("userAddress").value;
+  }
+</script>
+[[end]]

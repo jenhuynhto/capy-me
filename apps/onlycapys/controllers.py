@@ -30,7 +30,7 @@ from yatl.helpers import A
 from .common import db, session, T, cache, auth, logger, authenticated, unauthenticated, flash
 from py4web.utils.form import Form, FormStyleBulma
 import requests
-import json
+
 
 @action("index")
 @action.uses("index.html", auth, T)
@@ -52,12 +52,12 @@ def index():
         redirect(URL('index'))
     return dict(form=form)
 
+
 @action("about")
 @action.uses("about.html", auth, T)
 def about():
     return dict( about_us_url = URL('about'))
 
-import requests
 
 @action("form", method=["GET", "POST"])
 @action.uses("Forum.html", db, session, T)
@@ -96,6 +96,6 @@ def form():
 
 @action("alert")
 @action.uses("Alert.html", auth, T)
-def display_facts():
-   
+def form():
     return dict()
+
