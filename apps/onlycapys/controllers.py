@@ -96,6 +96,19 @@ def form():
 
 @action("alert")
 @action.uses("Alert.html", auth, T)
+<<<<<<< HEAD
 def form():
     return dict()
 
+=======
+def display_facts():
+   
+    return dict()
+
+@action("zoos")
+@action.uses("zoos.html", auth, T)
+def zoos():
+    zoos = db(db.zoo).select(orderby=db.zoo.name)
+    print("zoos: ", zoos)
+    return dict(zoos=zoos)
+>>>>>>> 3d28c3686f2335d714b54b3a7b40a468142d0ca8
