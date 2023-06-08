@@ -32,7 +32,7 @@ from py4web.utils.form import Form, FormStyleBulma
 import requests
 
 
-@action("index")
+@action("index",  method=["GET", "POST"])
 @action.uses("index.html", auth, T)
 def index():
     #user = auth.get_user()
@@ -62,42 +62,23 @@ def about():
 @action("form", method=["GET", "POST"])
 @action.uses("Forum.html", db, session, T)
 def form():
-    form = Form(db.contact, csrf_session=session, formstyle=FormStyleBulma)
-    if form.accepted:
-        # Form was submitted and accepted
-        # Store the form data in the database
-        db.contact.insert(fullname=form.vars.fullname,
-                          email=form.vars.email,
-                          message=form.vars.message)
-        
-        # Submit the form data to the external API
-        api_url = "https://formspree.io/f/xpzegkdd"
-        payload = {
-            "email": form.vars.email,
-            "first name": form.vars.fullname.split()[0],
-            "last name": form.vars.fullname.split()[-1],
-            "location": "",
-            "message": form.vars.message
-        }
-        response = requests.post(api_url, data=payload)
-        
-        if response.status_code == 200:
-            flash("Form submitted successfully!")
-        else:
-            flash("Failed to submit the form. Please try again.")
-        
-        redirect(URL('index'))
-    elif form.errors:
-        # Form had errors
-        flash("Form contains errors. Please check your inputs.")
+  
 
-    return dict(form=form)
+    return dict()
 
 
 @action("alert")
 @action.uses("Alert.html", auth, T)
 def form():
     return dict()
+
+@action("zoos")
+@action.uses("zoos.html", auth, T)
+def zoo():
+    zoos = db(db.zoo).select()
+    
+    return dict(zoos = zoos)
+
 
 @action('mytemplate')
 def my_page():
