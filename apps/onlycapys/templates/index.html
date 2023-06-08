@@ -221,7 +221,6 @@
 // }
   function updateMap() {
       var geocoder = new google.maps.Geocoder();
-      document.getElementById("result").innerHTML = document.getElementById("userAddress").value;
       var locationName = document.getElementById("result").innerHTML;
 
       geocoder.geocode({ address: locationName }, function (results, status) {
