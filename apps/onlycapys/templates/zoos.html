@@ -1,0 +1,33 @@
+[[extend 'layout.html']]
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoos</title>
+    <link rel="stylesheet" href="css/no.css">
+</head>
+
+<div class="section">
+    Search for Zoo
+    <br><br>
+    [[for zoo in zoos:]]
+    <div class="columns is-mobile">
+        <div class="column is-one-third">
+
+        </div>
+        <div class="column">
+            <div class="box has-text-centered">
+                [[=zoo["name"]]]
+                <br>
+                <button class="button">Like <i class="fa fa-heart" style="margin-left: 10px;" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="column">
+        </div>
+    </div>
+    <br>
+    [[pass]]
+</div>
+

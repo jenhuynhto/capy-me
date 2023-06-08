@@ -19,16 +19,25 @@
       <!-- Navigation bar -->
       <nav class="white">
         <!-- Logo -->
-        <a href="[[=URL('index')]]">
-          <img id="onlycaps_logo" style="margin-left: 100px;" src="../static/images/onlycapys_logo.png">
+        <a href="[[=URL('index')]]" style="margin-left: 100px;">
+          <img id="onlycaps_logo" src="../static/images/onlycapys_logo.png">
         </a>
-        <!-- Our Mission -->
-        <a style="margin-left: 25px;">
-          <strong>Our Mission</strong>
+        <!-- About Us -->
+        <a href="[[=URL('about')]]" style="margin-left: 25px;">
+          <strong>About Us</strong>
+          <!-- when "about us" is clicked, go to about.html-->
+        </a>
+        <!-- Random CapyFact -->
+        <a href="[[=URL('alert')]]"  style="margin-left: 25px;">
+          <strong>CapyFact</strong>
         </a>
         <!-- Forum -->
-        <a style="margin-left: 25px;">
+        <a href="[[=URL('form')]]"  style="margin-left: 25px;">
           <strong>Forum</strong>
+        </a>
+        <!-- All Zoos -->
+        <a href="[[=URL('zoos')]]"  style="margin-left: 25px;">
+          <strong>Rate Zoos</strong>
         </a>
         <!-- Do not touch this -->
         <label for="hamburger">☰</label>

@@ -46,8 +46,59 @@ def index():
     #    print(response.text)
     #else:
     #    print("Error:", response.status_code, response.text)
-
+   
     form = Form(db.contact, csruf_session=session, formstyle=FormStyleBulma)
     if form.accepted:
         redirect(URL('index'))
     return dict(form=form)
+
+
+@action("about")
+@action.uses("about.html", auth, T)
+def about():
+    return dict( about_us_url = URL('about'))
+
+
+@action("form", method=["GET", "POST"])
+@action.uses("Forum.html", db, session, T)
+def form():
+    form = Form(db.contact, csrf_session=session, formstyle=FormStyleBulma)
+    if form.accepted:
+        # Form was submitted and accepted
+        # Store the form data in the database
+        db.contact.insert(fullname=form.vars.fullname,
+                          email=form.vars.email,
+                          message=form.vars.message)
+        
+        # Submit the form data to the external API
+        api_url = "https://formspree.io/f/xpzegkdd"
+        payload = {
+            "email": form.vars.email,
+            "first name": form.vars.fullname.split()[0],
+            "last name": form.vars.fullname.split()[-1],
+            "location": "",
+            "message": form.vars.message
+        }
+        response = requests.post(api_url, data=payload)
+        
+        if response.status_code == 200:
+            flash("Form submitted successfully!")
+        else:
+            flash("Failed to submit the form. Please try again.")
+        
+        redirect(URL('index'))
+    elif form.errors:
+        # Form had errors
+        flash("Form contains errors. Please check your inputs.")
+
+    return dict(form=form)
+
+
+@action("alert")
+@action.uses("Alert.html", auth, T)
+def form():
+    return dict()
+
+@action('mytemplate')
+def my_page():
+    return dict()

@@ -1,0 +1,386 @@
+[
+  {
+    "zoo": "Alabama Gulf Coast Zoo",
+    "address": "20499 Oak Rd E, Gulf Shores, AL 36542",
+    "lat": 30.315856535866338,
+    "long": -87.6763400424737
+  },
+  {
+    "zoo": "Montgomery Zoo",
+    "address": "2301 Coliseum Parkway, Montgomery, AL 36110",
+    "lat": 32.419974182843795,
+    "long": -86.2752454534194
+  },
+  {
+    "zoo": "Reid Park Zoo",
+    "address": "3400 Zoo Court, Tucson, AZ 85716",
+    "lat": 32.20999083907265,
+    "long": -110.92071211760974
+  },
+  {
+    "zoo": "Wildlife World Zoo and Aquarium",
+    "address": "16501 West Northern Ave, Litchfield Park, AZ 85340",
+    "lat": 33.55034105043301,
+    "long": -112.41138078558787
+  },
+  {
+    "zoo": "Fresno Chaffee Zoo",
+    "address": "894 West Belmont Avenue, Fresno, CA 93728",
+    "lat": 36.7522050970335,
+    "long": -119.82317662525696
+  },
+  {
+    "zoo": "Happy Hollow Park and Zoo",
+    "address": "748 Story Road, San Jose, CA 95112",
+    "lat": 37.32554450140031,
+    "long": -121.86303243045658
+  },
+  {
+    "zoo": "Sacramento Zoo",
+    "address": "3930 West Land Park Drive, Sacramento, CA 95822",
+    "lat": 38.53929585559438,
+    "long": -121.5040148326816
+  },
+  {
+    "zoo": "Santa Barbara Zoo",
+    "address": "500 Ninos Drive, Santa Barbara, CA 93103",
+    "lat": 34.4204229737213,
+    "long": -119.66709520402726
+  },
+  {
+    "zoo": "San Diego Zoo",
+    "address": "2920 Zoo Drive, San Diego, CA 92101",
+    "lat": 32.736034173369404,
+    "long": 32.736034173369404
+  },
+  {
+    "zoo": "San Francisco Zoo",
+    "address": "Sloat Blvd &, Upper Great Hwy, San Francisco, CA 94132",
+    "lat": 37.73297331253071,
+    "long": -122.5028133462121
+  },
+  {
+    "zoo": "Zoo to You",
+    "address": "2445 Adobe Road, Paso Robles, CA 93446",
+    "lat": 35.68453872173493,
+    "long": -120.65190753835539
+  },
+  {
+    "zoo": "Denver Zoo",
+    "address": "2300 Steele St, Denver, CO 80205",
+    "lat": 39.749596071560426,
+    "long": -104.95084117495368
+  },
+  {
+    "zoo": "Brandywine Zoo",
+    "address": "1001 N Park Dr, Wilmington, DE 19802",
+    "lat": 39.75599996768,
+    "long": -75.54966134611784
+  },
+  {
+    "zoo": "Amazing Animals",
+    "address": "4325 Rambler Ave, St. Cloud, FL 34772",
+    "lat": 28.165242540070267,
+    "long": -81.25090045938737
+  },
+  {
+    "zoo": "Brevard Zoo",
+    "address": "8225 North Wickham Road, Melbourne, FL 32940",
+    "lat": 28.225026388482643,
+    "long": -80.71387706193272
+  },
+  {
+    "zoo": "Jungle Island",
+    "address": "1111 Parrot Jungle Trail, Miami, FL 33132",
+    "lat": 25.785000698535608,
+    "long": -80.17421167550516
+  },
+  {
+    "zoo": "Palm Beach Zoo",
+    "address": "1301 Summit Blvd, West Palm Beach, FL 33405",
+    "lat": 26.666981739640196,
+    "long": -80.06926566198413
+  },
+  {
+    "zoo": "Gatorland",
+    "address": "14501 S Orange Blossom Trl, Orlando, FL 32837",
+    "lat": 28.35564957582458,
+    "long": -81.40218944658615
+  },
+  {
+    "zoo": "Jacksonville Zoo and Gardens",
+    "address": "370 Zoo Pkwy, Jacksonville, FL 32218",
+    "lat": 30.402260588973107,
+    "long": -81.64325790418468
+  },
+  {
+    "zoo": "Gulf Breeze Zoo",
+    "address": "5701 Gulf Breeze Parkway, Gulf Breeze, FL 32563",
+    "lat": 30.40119858937617,
+    "long": -86.98443436185575
+  },
+  {
+    "zoo": "Zoo World",
+    "address": "9008 Front Beach Rd, Panama City Beach, FL 32407",
+    "lat": 30.18221770052515,
+    "long": -85.78728246186381
+  },
+  {
+    "zoo": "North Georgia Wildlife Park",
+    "address": "2912 Paradise Valley Rd, Cleveland, GA 30528",
+    "lat": 34.62296997295393,
+    "long": -83.86544635984124
+  },
+  {
+    "zoo": "Zoo Boise",
+    "address": "355 Julia Davis Dr, Boise, ID 83702",
+    "lat": 43.60789151915684,
+    "long": -116.20268268825485
+  },
+  {
+    "zoo": "Brookfield Zoo",
+    "address": "8400 W 31st St, Brookfield, IL 60513",
+    "lat": 41.83274013528231,
+    "long": -87.83681786135844
+  },
+  {
+    "zoo": "Potawatomi Zoo",
+    "address": "500 S Greenlawn Ave, South Bend, IN 46615",
+    "lat": 41.66933205689392,
+    "long": -86.21793394602447
+  },
+  {
+    "zoo": "Rolling Hills Zoo",
+    "address": "625 N. Hedville Road, Salina, KS 67401",
+    "lat": 38.85256757173969,
+    "long": -97.76413664616047
+  },
+  {
+    "zoo": "Great Bend Brit Spaugh Zoo",
+    "address": "2123 Main Street, Great Bend, KS 67530",
+    "lat": 38.37305179435253,
+    "long": -98.7663815615249
+  },
+  {
+    "zoo": "Alexandria Zoo",
+    "address": "3016 Masonic Drive, Alexandria, LA, 71301",
+    "lat": 31.287786942865296,
+    "long": 92.45721147531611
+  },
+  {
+    "zoo": "Audubon Zoo",
+    "address": "6500 Magazine Street, New Orleans, LA 70118",
+    "lat": 29.923770569292056,
+    "long": -90.1314282618731
+  },
+  {
+    "zoo": "Baton Rouge Zoo",
+    "address": "3601 Thomas Rd, Baton Rouge, LA 70807",
+    "lat": 30.562323194958086,
+    "long": -91.1598007813719
+  },
+  {
+    "zoo": "Salisbury Zoo",
+    "address": "755 S Park Dr, Salisbury, MD 21804",
+    "lat": 38.36072307184974,
+    "long": -75.5826251326899
+  },
+  {
+    "zoo": "Southwick’s Zoo",
+    "address": "2 Southwick St, Mendon, MA",
+    "lat": 42.06503994898208,
+    "long": -71.58460934966689
+  },
+  {
+    "zoo": "John Ball Zoo",
+    "address": "1300 Fulton St W, Grand Rapids, MI 49504",
+    "lat": 42.963580922372316,
+    "long": -85.70464673246562
+  },
+  {
+    "zoo": "Sustainable Safari",
+    "address": "3001 White Bear Ave #2001, Maplewood, MN 55109",
+    "lat": 45.030552371075075,
+    "long": -93.02236990352198
+  },
+  {
+    "zoo": "Hattiesburg Zoo",
+    "address": "107 S 17th Ave., Hattiesburg, MS 39401",
+    "lat": 31.32265957431229,
+    "long": -89.31500270415034
+  },
+  {
+    "zoo": "Dickerson Park Zoo",
+    "address": "1401 W Norton Rd, Springfield, MO 65803",
+    "lat": 37.254146572127446,
+    "long": -93.3064575039048
+  },
+  {
+    "zoo": "Kansas City Zoo",
+    "address": "6800 Zoo Drive, Kansas City, MO 64132",
+    "lat": 39.00726510872259,
+    "long": -94.52935503265985
+  },
+  {
+    "zoo": "St. Louis Zoo",
+    "address": "1 Government Dr, St. Louis, MO 63110",
+    "lat": 38.6349538217873,
+    "long": -90.29098717260486
+  },
+  {
+    "zoo": "Bergen County Zoo",
+    "address": "Van Saun County Park, 216 Forest Ave, Paramus, NJ 07652",
+    "lat": 40.93365378196936,
+    "long": -74.04758573256743
+  },
+  {
+    "zoo": "Cape May County Park and Zoo",
+    "address": "707 US-9 North, Cape May Court House, NJ 08210",
+    "lat": 39.10229089427952,
+    "long": -74.81233416149088
+  },
+  {
+    "zoo": "Alameda Park Zoo",
+    "address": "1021 N White Sands Blvd, Alamogordo, NM 88310",
+    "lat": 32.900101165486376,
+    "long": -105.96086540408912
+  },
+  {
+    "zoo": "Albuquerque BioPark Zoo",
+    "address": "903 10th St SW, Albuquerque, NM 87102",
+    "lat": 35.07795804637579,
+    "long": -106.66310070880228
+  },
+  {
+    "zoo": "Animal Adventure Park",
+    "address": "85 Martin Hill Road, Harpursville, NY 13787",
+    "lat": 42.153904824984934,
+    "long": -75.66808283250687
+  },
+  {
+    "zoo": "Staten Island Zoo",
+    "address": "614 Broadway, Staten Island, NY 10310",
+    "lat": 40.62512397141251,
+    "long": -74.1153914614181
+  },
+  {
+    "zoo": "Jungle Experience Zoo",
+    "address": "6601 NY-149, Granville, NY 12832",
+    "lat": 43.37251486995826,
+    "long": -73.33459187477358
+  },
+  {
+    "zoo": "Buffalo Zoo",
+    "address": "300 Parkside Ave, Buffalo, NY 14214",
+    "lat": 42.937099507349316,
+    "long": -78.85154473061827
+  },
+  {
+    "zoo": "It’s a Zoo Life",
+    "address": "4313 NC-42, Macclesfield, NC 27852",
+    "lat": 35.78680007577649,
+    "long": -77.67465410396937
+  },
+  {
+    "zoo": "Cleveland Metroparks Zoo",
+    "address": "3900 Wildlife Way, Cleveland, OH 44109",
+    "lat": 41.44605936096749,
+    "long": -81.71234565398291
+  },
+  {
+    "zoo": "Columbus Zoo",
+    "address": "4850 W Powell Rd, Powell, OH 43065",
+    "lat": 40.156152671549634,
+    "long": -83.11796090376967
+  },
+  {
+    "zoo": "Lake Tobias Wildlife Park",
+    "address": "760 Tobias Rd, Halifax, PA 17032",
+    "lat": 40.50108997143184,
+    "long": -76.89079000375301
+  },
+  {
+    "zoo": "Brights Zoo",
+    "address": "3425 US-11E, Limestone, TN 37681",
+    "lat": 36.252673220499375,
+    "long": -82.5976603039492
+  },
+  {
+    "zoo": "Chattanooga Zoo",
+    "address": "301 N Holtzclaw Ave, Chattanooga, TN 37404",
+    "lat": 35.042632372806615,
+    "long": -85.28209890400122
+  },
+  {
+    "zoo": "Memphis Zoo",
+    "address": "2000 Prentiss Pl, Memphis, TN 38112",
+    "lat": 35.14821080017107,
+    "long": -89.9949972463257
+  },
+  {
+    "zoo": "Abilene Zoo",
+    "address": "2070 Zoo Ln, Abilene, TX 79602",
+    "lat": 32.43915182853945,
+    "long": -99.69061821760077
+  },
+  {
+    "zoo": "Aggieland Animal Safari",
+    "address": "18075 FM 974, Bryan, TX 77808",
+    "lat": 30.874683666052608,
+    "long": -96.23462670416716
+  },
+  {
+    "zoo": "Animal World and Snake Farm Zoo",
+    "address": "5640 S Interstate 35, New Braunfels, TX 78132",
+    "lat": 29.655800875128982,
+    "long": -98.18690180421171
+  },
+  {
+    "zoo": "Austin Zoo",
+    "address": "10808 Rawhide Trail, Austin, TX 78736",
+    "lat": 30.26085254097348,
+    "long": -97.93776117535431
+  },
+  {
+    "zoo": "Cameron Park Zoo",
+    "address": "1701 North 4th Street, Waco, TX 76707",
+    "lat": 31.570143761128136,
+    "long": -97.14455964304885
+  },
+  {
+    "zoo": "Gladys Porter Zoo",
+    "address": "500 E Ringgold St, Brownsville, TX 78520",
+    "lat": 25.913357027150113,
+    "long": -97.4953610466657
+  },
+  {
+    "zoo": "Houston Zoo",
+    "address": "6200 Hermann Park Dr, Houston, TX 77030",
+    "lat": 29.715744003329355,
+    "long": -95.39032070420956
+  },
+  {
+    "zoo": "Utah Petting Zoo at Ivie Acres Farm",
+    "address": "5605 W Higley Lane, Grantsville, UT 84029",
+    "lat": 40.66545629517742,
+    "long": -112.4398689749094
+  },
+  {
+    "zoo": "NOVA Wild",
+    "address": "1228 Hunter Mill Rd, Vienna, VA 22182",
+    "lat": 38.972041571714215,
+    "long": -77.31266890382591
+  },
+  {
+    "zoo": "Debbie Dolittle's Petting Zoo",
+    "address": "120 138th St S Ste. D, Tacoma, WA 98444",
+    "lat": 47.13107937392472,
+    "long": -122.43286177457202
+  },
+  {
+    "zoo": "Henry Vilas Zoo",
+    "address": "702 S. Randall Avenue, Madison, WI 53715",
+    "lat": 43.060594693481455,
+    "long": -89.41002427478966
+  }
+]
