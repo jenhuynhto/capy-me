@@ -99,3 +99,6 @@ def form():
 def form():
     return dict()
 
+@action('mytemplate')
+def my_page():
+    return dict()
