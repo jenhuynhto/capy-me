@@ -16,6 +16,18 @@ import os
 # db.commit()
 #
 
+
+try:
+    with open('../apps/onlycapys/data/capybara_zoos.json', 'r') as file:
+        data = json.load(file)
+
+except FileNotFoundError:
+    with open('apps/onlycapys/data/capybara_zoos.json', 'r') as file:
+        data = json.load(file)
+
+
+
+
 db.define_table('contact',
                 Field('fullname', requires=IS_NOT_EMPTY(), label="Full Name"),
                 Field('email', requires=IS_NOT_EMPTY(), label="E-mail"),
@@ -34,6 +46,16 @@ db.define_table('userAddress',
                 Field('userid', 'reference auth_user'),
                 Field('address'),
                 )
+
+query = db(db.zoo.id > 0)
+if query.isempty():
+   for item in data:
+    db.zoo.insert(
+        name=item['zoo'],
+        address=item['address'],
+        lat=item['lat'],
+        long=item['long']
+    )
 
 
 
