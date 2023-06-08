@@ -1,10 +1,33 @@
 [[extend 'layout.html']]
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>Capybara Facts</title>
   <style>
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      display: none;
+    }
+
+    .popup.active {
+      display: block;
+    }
+
+    .popup-content {
+      text-align: center;
+    }
+
+    .popup-close {
+      cursor: pointer;
+    }
+
     button {
       padding: 10px 20px;
       font-size: 18px;
@@ -13,12 +36,40 @@
       border: none;
       cursor: pointer;
     }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      padding: 20px;
+      background-color: #ccc;
+      border: 1px solid #999;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <h1>Capybara Facts</h1>
+  
   <button onclick="displayRandomFact()">Fact</button>
 
+  <div id="popup" class="popup">
+   
+    <div class = "box">
+      <img id="fact-image" src="" alt="Capybara Image" />
+    </div>
+    <div class="container">
+      <div class="box">
+        <p class="fact-text" id="fact-text"></p>
+      </div>
+      
+    </div>
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+  </div>
+  
   <script>
     let facts = [];
 
@@ -38,12 +89,23 @@
         return;
       }
 
-      // Generate a random index to select a fact from the "facts" array
       const randomIndex = Math.floor(Math.random() * facts.length);
       const fact = facts[randomIndex];
 
-      // Display the random fact using the alert function
-      alert(fact);
+      const factImage = document.getElementById("fact-image");
+      const popup = document.getElementById("popup");
+      const factText = document.getElementById("fact-text");
+
+      
+      const randomIndex2 = Math.floor(Math.random() * 100) + 1;
+      factImage.src = `https://api.capy.lol/v1/capybara/${randomIndex2}`;
+      factText.textContent = fact;
+      popup.classList.add("active");
+    }
+
+    function closePopup() {
+      const popup = document.getElementById("popup");
+      popup.classList.remove("active");
     }
   </script>
 </body>
