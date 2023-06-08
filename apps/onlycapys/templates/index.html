@@ -16,8 +16,11 @@
       <div class="block">
         <!-- <img id="map" style="border-radius: 20px; width:90%; height: auto; " src="../static/images/tempmap.png" alt="Map of Santa Cruz, CA"> -->
         <style>
+
           #map {
             height: 500px;
+            width: auto;
+          
           }
         </style>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz7rHQYL7rRV6ii-oX_9MWoghMDRoZSss"></script>
@@ -55,7 +58,7 @@
         <input type="text" id="userAddress" name="userAddress" placeholder="123 Capybara Ave., Santa Cruz, CA 95060">
 
       </form>
-      <button class="button" style="background-color: #327bea; color: white; font-weight: 500; width: 120px;" onClick="addressSubmit()">
+      <button class="button" style="background-color: #327bea; color: white; font-weight: 500; width: 120px;" onClick="updateMap()">
         Find Now
         <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
       </button>
@@ -122,37 +125,130 @@
 <script>
   function addressSubmit() {
     document.getElementById("result").innerHTML = document.getElementById("userAddress").value;
+    return document.getElementById("result").innerHTML
   }
 
   function initMap() {
   var geocoder = new google.maps.Geocoder();
-  var locationName = "Santa Cruz, CA";
 
-  geocoder.geocode({ address: locationName }, function (results, status) {
-    if (status === google.maps.GeocoderStatus.OK) {
+  // Get the user's IP geolocation data
+  fetch('https://ipapi.co/json/')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var userLat = data.latitude;
+      var userLng = data.longitude;
+
       var map = new google.maps.Map(document.getElementById('map'), {
-        // center: {lat: 37.7749, lng: -122.4194}, // Specify the initial map center
-        center: results[0].geometry.location, // Use the first result's coordinates as the center
-        zoom: 7 // Lower number is zoomed out, higher number is zoomed in
+        center: { lat: userLat, lng: userLng },
+        zoom: 4
       });
 
-      var marker = new google.maps.Marker({
-        position: results[0].geometry.location,
-        map: map,
-        title: "Marker Title", // Optional: You can add a title to the marker       
-      });
-
-      var marker2 = new google.maps.Marker({
-        position: {lat: 37.7749, lng: -122.4194},
-        map: map,
-        title: "Marker Title" // Optional: You can add a title to the marker
-      });
-      
-    } else {
-      console.log('Geocode was not successful for the following reason: ' + status);
-    }
-  });
+      fetch('https://raw.githubusercontent.com/jenhuynhto/cse183-final/main/apps/onlycapys/data/capybara_zoos.json')
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          data.forEach(function (entry) {
+            var marker = new google.maps.Marker({
+              position: { lat: entry.lat, lng: entry.long },
+              map: map,
+              title: entry.zoo
+            });
+          });
+        })
+        .catch(function (error) {
+          console.log('Error fetching JSON file:', error);
+        });
+    })
+    .catch(function (error) {
+      console.log('Error fetching user location:', error);
+    });
 }
+
+
+
+//   function initMap() {
+//   var geocoder = new google.maps.Geocoder();
+
+//   var locationName = "Santa Cruz, CA";
+
+//   geocoder.geocode({ address: locationName }, function (results, status) {
+//     if (status === google.maps.GeocoderStatus.OK) {
+//       var map = new google.maps.Map(document.getElementById('map'), {
+//         // center: {lat: 37.7749, lng: -122.4194}, // Specify the initial map center
+//         center: results[0].geometry.location, // Use the first result's coordinates as the center
+//         zoom: 7 // Lower number is zoomed out, higher number is zoomed in
+//       });
+
+
+//       fetch('https://raw.githubusercontent.com/jenhuynhto/cse183-final/main/apps/onlycapys/data/capybara_zoos.json') // Fetch the JSON file
+//         .then(function (response) {
+//           console.log(response)
+//           return response.json(); // Parse the JSON data
+//         })
+//         .then(function (data) {
+//           // Iterate over each entry in the JSON data
+//           data.forEach(function (entry) {
+//             var marker = new google.maps.Marker({
+//               position: { lat: entry.lat, lng: entry.long }, // Use the entry's coordinates
+//               map: map,
+//               title: entry.zoo // Use the entry's zoo as the marker title
+//             });
+//           });
+//         })
+//         .catch(function (error) {
+//           console.log('Error fetching JSON file:', error);
+//         });
+      
+//       // var marker = new google.maps.Marker({
+//       //   position: results[0].geometry.location,
+//       //   map: map,
+//       //   title: "Marker Title", // Optional: You can add a title to the marker       
+//       // });
+
+//       // var marker2 = new google.maps.Marker({
+//       //   position: {lat: 37.7749, lng: -122.4194},
+//       //   map: map,
+//       //   title: "Marker Title" // Optional: You can add a title to the marker
+//       // });
+      
+//     } else {
+//       console.log('Geocode was not successful for the following reason: ' + status);
+//     }
+//   });
+// }
+  function updateMap() {
+      var geocoder = new google.maps.Geocoder();
+      document.getElementById("result").innerHTML = document.getElementById("userAddress").value;
+      var locationName = document.getElementById("result").innerHTML;
+
+      geocoder.geocode({ address: locationName }, function (results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            // center: {lat: 37.7749, lng: -122.4194}, // Specify the initial map center
+            center: results[0].geometry.location, // Use the first result's coordinates as the center
+            zoom: 7 // Lower number is zoomed out, higher number is zoomed in
+          });
+
+          var marker = new google.maps.Marker({
+            position: results[0].geometry.location,
+            map: map,
+            title: "Marker Title", // Optional: You can add a title to the marker       
+          });
+
+          var marker2 = new google.maps.Marker({
+            position: { lat: 37.7749, lng: -122.4194 },
+            map: map,
+            title: "Marker Title" // Optional: You can add a title to the marker
+          });
+
+        } else {
+          console.log('Geocode was not successful for the following reason: ' + status);
+        }
+      });
+    }
 
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz7rHQYL7rRV6ii-oX_9MWoghMDRoZSss&callback=initMap"></script>

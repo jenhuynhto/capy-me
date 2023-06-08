@@ -22,7 +22,7 @@ try:
         data = json.load(file)
 
 except FileNotFoundError:
-    with open('apps/onlycapys/data/capybara_zoos.json', 'r') as file:
+    with open('apps/onlycapys/data/capybara_zoos.json', 'rb') as file:
         data = json.load(file)
 
 

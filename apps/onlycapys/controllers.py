@@ -30,6 +30,7 @@ from yatl.helpers import A
 from .common import db, session, T, cache, auth, logger, authenticated, unauthenticated, flash
 from py4web.utils.form import Form, FormStyleBulma
 import requests
+from py4web import response
 
 
 @action("index")
@@ -102,3 +103,4 @@ def form():
 @action('mytemplate')
 def my_page():
     return dict()
+    
