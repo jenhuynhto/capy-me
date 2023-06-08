@@ -123,11 +123,6 @@
 
 [[block page_scripts]]
 <script>
-  function addressSubmit() {
-    document.getElementById("result").innerHTML = document.getElementById("userAddress").value;
-    return document.getElementById("result").innerHTML
-  }
-
   function initMap() {
   var geocoder = new google.maps.Geocoder();
 
@@ -165,7 +160,7 @@
     .catch(function (error) {
       console.log('Error fetching user location:', error);
     });
-}
+  }
 
 
 
@@ -219,35 +214,24 @@
 //     }
 //   });
 // }
-  function updateMap() {
-      var geocoder = new google.maps.Geocoder();
-      var locationName = document.getElementById("result").innerHTML;
+function updateMap() {
+    var geocoder = new google.maps.Geocoder();
+    document.getElementById("result").innerHTML = document.getElementById("userAddress").value;
+    var locationName = document.getElementById("result").innerHTML;
 
-      geocoder.geocode({ address: locationName }, function (results, status) {
-        if (status === google.maps.GeocoderStatus.OK) {
-          var map = new google.maps.Map(document.getElementById('map'), {
-            // center: {lat: 37.7749, lng: -122.4194}, // Specify the initial map center
-            center: results[0].geometry.location, // Use the first result's coordinates as the center
-            zoom: 7 // Lower number is zoomed out, higher number is zoomed in
-          });
+    geocoder.geocode({ address: locationName }, function (results, status) {
+      if (status === google.maps.GeocoderStatus.OK) {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          // center: {lat: 37.7749, lng: -122.4194}, // Specify the initial map center
+          center: results[0].geometry.location, // Use the first result's coordinates as the center
+          zoom: 7 // Lower number is zoomed out, higher number is zoomed in
+        });
 
-          var marker = new google.maps.Marker({
-            position: results[0].geometry.location,
-            map: map,
-            title: "Marker Title", // Optional: You can add a title to the marker       
-          });
-
-          var marker2 = new google.maps.Marker({
-            position: { lat: 37.7749, lng: -122.4194 },
-            map: map,
-            title: "Marker Title" // Optional: You can add a title to the marker
-          });
-
-        } else {
-          console.log('Geocode was not successful for the following reason: ' + status);
-        }
-      });
-    }
+      } else {
+        console.log('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+  }
 
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz7rHQYL7rRV6ii-oX_9MWoghMDRoZSss&callback=initMap"></script>
