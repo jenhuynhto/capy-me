@@ -28,14 +28,18 @@
       cursor: pointer;
     }
 
-    button {
+    /* .is-clickable {
+    cursor: pointer;
+    } */
+
+    /* button {
       padding: 10px 20px;
       font-size: 18px;
       background-color: #4CAF50;
       color: white;
       border: none;
       cursor: pointer;
-    }
+    } */
     .container {
       display: flex;
       flex-direction: column;
@@ -52,14 +56,15 @@
   </style>
 </head>
 <body>
-  <h1>Capybara Facts</h1>
-  
-  <button onclick="displayRandomFact()">Fact</button>
+  <p class="title is-1">
+    Capybara Fact
+  </p>  
+  <button class="button is-primary " onclick="displayRandomFact()">Fact</button>
 
   <div id="popup" class="popup">
    
     <div class = "box">
-      <img id="fact-image" style="height: 60vh" src="" alt="Capybara Image" />
+      <img id="fact-image" style="height: 60vh; width: auto" class="is-mobile" src="" alt="Capybara Image" />
     </div>
     <div class="container">
       <div class="box">
