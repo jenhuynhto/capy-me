@@ -3,3 +3,4 @@ _dashboard/
 test.bat
 apps/onlycapys/test.py
 apps/onlycapys/.env
+apps/onlycapys/databases
