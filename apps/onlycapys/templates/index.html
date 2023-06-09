@@ -26,12 +26,11 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz7rHQYL7rRV6ii-oX_9MWoghMDRoZSss"></script>
         <div id="map" class="is-loading"></div>
       </div>
-      <div class="block" style="margin-top: 325px;">
+      <div class="block" style="margin-top: 300px;">
         <h1 class="title is-size-3" style="font-weight: 700;">The Capybara
         </h1>
-        <p>In the wetlands, only <em>one</em> remarkable creature reigns supreme — the capybara, nature's gentle giant.
-          With their impressive size, sleek body, and playful nature, these charismatic beings
-          captivate hearts.
+        <p>A rodent of unusual size. Is it a beaver without a tail? A hairy pig without a snout? 
+          No, it's a capybara, the largest rodent in the world!
         </p>
         <div class="buttons ">
           <button class="button is-info" onclick="displayRandomFact()">Fact</button>
@@ -41,14 +40,14 @@
         <div class="columns is-mobile has-text-left" style="padding-left: 10px">
           <!-- random generate fun fact text #1-->
           <div class="column is-half is-mobile">
-            <span class="title is-size-5" style="font-weight: 700;">Fun Fact #1</span>
+            <span class="title is-size-5" style="font-weight: 700;" id="fact-number">Fun Fact #1</span>
             <p class="fact-text has-text-left	" id="fact-text">
               Capybaras are the largest rodents in the world! Reaching weights of up to 150lbs 
             </p>
           </div>
           <!-- random generate fun fact text #2-->
           <div class="column is-mobile">
-            <span class="title is-size-5" style="font-weight: 700;">Fun Fact #2</span>
+            <span class="title is-size-5" style="font-weight: 700;" id="fact-number-2">Fun Fact #2</span>
             <p class="fact-text-2 has-text-left" id="fact-text-2">
               Capybaras are the largest rodents in the world! Reaching weights of up to 150lbs 
             </p>      
@@ -273,33 +272,39 @@ function updateMap() {
       return;
     }
 
-    var randomIndex = Math.floor(Math.random() * facts.length);
-    // console.log("facts.length is", facts.length);
-    // var randomIndex = facts.length;
-    const fact = facts[randomIndex];
-    // log fact #1
-    console.log("getting fact #1 from index ", randomIndex);
-
-    if(randomIndex >= facts.length-1){
-      randomIndex= -1;
-    }
-    const factTwo = facts[randomIndex+1];
-    // log fact #1
-    console.log("getting fact #2 from index ", randomIndex+1);
-
+    // declare where we are putting the stuff in by id
     const factImage = document.getElementById("fact-image");
     const popup = document.getElementById("popup");
+    const factNumber = document.getElementById("fact-number");
+    const factNumberTwo = document.getElementById("fact-number-2");
     const factText = document.getElementById("fact-text");
     const factTextTwo = document.getElementById("fact-text-2");
 
+    // random index for getting fact
+    var randomIndex = Math.floor(Math.random() * facts.length);
+    const fact = facts[randomIndex];
+
+    // updating fact number
+    // + 1 for index, +2 for the first 2 facts already shown
+    factNumber.textContent = "Fun Fact #" + (randomIndex + 3);
     
-    const randomIndex2 = Math.floor(Math.random() * 100) + 1;
-    // log the image link
-    console.log("getting image `https://api.capy.lol/v1/capybara/", randomIndex2);
+    var factIndexTwo = randomIndex + 3;
+
+    // random index #2 for 2nd fact, goes back to index 0 if reached end of list
+    if(randomIndex >= facts.length-1){
+      randomIndex= -1;
+      // updating the 2nd fact number
+      factIndexTwo = factIndexTwo - facts.length;
+    }
+    const factTwo = facts[randomIndex+1];
     
-    // updating image and fact
-    factImage.src = `https://api.capy.lol/v1/capybara/${randomIndex2}`;
+    // random index #3 for image
+    const randomIndex3 = Math.floor(Math.random() * 100) + 1;    
+
+    // updating image and facts by id
+    factImage.src = `https://api.capy.lol/v1/capybara/${randomIndex3}`;
     factImage.alt="Capybara Image"
+    factNumberTwo.textContent = "Fun Fact #" + (factIndexTwo + 1);
     factText.textContent = fact;
     factTextTwo.textContent = factTwo;
   }
