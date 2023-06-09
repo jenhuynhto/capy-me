@@ -3,13 +3,14 @@
   <ol>
     <li><a href="#onlycapys">OnlyCapys</a></li>
     <li><a href="#built-with">Built With</a></li>
+    <!--
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
-    </li>
+    </li>-->
     <li><a href="#usage/user-stories">Usage/User Stories</a></li>
     <li><a href="#main-pages">Main Pages</a></li>
     <li><a href="#implementation-plan">Implementation Plan</a></li>
@@ -31,6 +32,7 @@ For our project, we plan to make a capybara locator to help users find capybaras
 <a href="https://bulma.io/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/gilbarbara/logos/804dc257b59e144eaca5bc6ffd16949752c6f789/logos/bulma.svg" alt="bulma" width="40" height="40"/> </a>
 </span>
 
+<!--
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -61,6 +63,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
+-->
 
 ## Main Pages
 https://www.figma.com/file/xhpThAoGEcpxTyCfcZVV1n/CSE183---Capybara-Project-Proposal?node-id=0%3A88&t=GRIpDimNPT0jz7Yj-1 
