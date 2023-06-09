@@ -1,7 +1,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#about-the-project">About the Project</a></li>
+    <li><a href="#onlycapys">OnlyCapys</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -17,13 +17,11 @@
   </ol>
 </details>
 
-# OnlyCapys
-
-## About the Project
+## OnlyCapys
 For our project, we plan to make a capybara locator to help users find capybaras near them! Users will be able to enter their location or zip code, and we will then generate a map of their area, highlighting the closest known capybara location to them. To implement this, we plan to gather information from a variety of sources, including social media platforms, wildlife organizations, and verified user submissions. In addition to the mapping, we plan to provide information on capybaras to educate users. The educational content will consist of articles, videos, and photos to help users learn about these fascinating creatures and their habits. If we have enough time, we will implement a forum where users can connect with other capybara enthusiasts and share their personal sightings and experiences, potentially a random capybara meme generator where users can click a button to see a random capybara meme, and more. To create our website, we plan to use Py4Web and Vue.js! Our team is also open to reducing our scope of what to implement if we run short on time.
 
 ## Built With
-Built using ...
+Built using ... 
 
 ## Getting Started
 
