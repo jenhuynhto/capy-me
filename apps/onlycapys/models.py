@@ -57,6 +57,6 @@ if query.isempty():
         long=item['long']
     )
 
-
+# db(db.zoo).delete()
 
 db.commit()
