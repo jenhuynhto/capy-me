@@ -7,8 +7,47 @@
     <title>Zoos</title>
     <link rel="stylesheet" href="css/no.css">
 </head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 5px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.grid-item {
+    text-align: center;
+    padding: 10px;
+}
+.heart-button {
+    background-color: rgb(101, 166, 226);
+    transition:0.25s ease;
+}
+.heart-button:hover {
+    background-color: rgb(0, 95, 212);
+}
+.heart-button:active {
+    background-color: red;
+}
+</style>
 
 <div class="section">
+    Search for Zoo
+    <br><br>
+    <div class="grid-container">
+        [[for zoo in zoos:]]
+        <div class="grid-item">
+            [[=zoo["name"]]]
+            <br>
+            <img src="../static\images\capybara1.png" width="500" height="auto">
+            <button class="heart-button">Like [[=zoo["likes"]]]<i class="fa fa-heart" style="margin-left: 10px;" aria-hidden="true"></i>
+            </button>
+        </div>
+        [[pass]]
+    </div>
+</div>
+
+<!-- <div class="section">
     Search for Zoo
     <br><br>
     [[for zoo in zoos:]]
@@ -29,5 +68,5 @@
     </div>
     <br>
     [[pass]]
-</div>
+</div> -->
 
