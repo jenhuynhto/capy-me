@@ -63,8 +63,6 @@ def about():
 @action("form", method=["GET", "POST"])
 @action.uses("Forum.html", db, session, T)
 def form():
-  
-
     return dict()
 
 
@@ -76,8 +74,7 @@ def form():
 @action("zoos")
 @action.uses("zoos.html", auth, T)
 def zoo():
-    zoos = db(db.zoo).select()
-    
+    zoos = db(db.zoo).select(orderby=db.zoo.name)
     return dict(zoos = zoos)
 
 

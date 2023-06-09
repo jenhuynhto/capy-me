@@ -18,7 +18,7 @@
     "long": -110.92071211760974
   },
   {
-    "zoo": "Wildlife World Zoo and Aquarium",
+    "zoo": "Wildlife World Zoo & Aquarium",
     "address": "16501 West Northern Ave, Litchfield Park, AZ 85340",
     "lat": 33.55034105043301,
     "long": -112.41138078558787
@@ -30,7 +30,7 @@
     "long": -119.82317662525696
   },
   {
-    "zoo": "Happy Hollow Park and Zoo",
+    "zoo": "Happy Hollow Park & Zoo",
     "address": "748 Story Road, San Jose, CA 95112",
     "lat": 37.32554450140031,
     "long": -121.86303243045658
@@ -108,7 +108,7 @@
     "long": -81.40218944658615
   },
   {
-    "zoo": "Jacksonville Zoo and Gardens",
+    "zoo": "Jacksonville Zoo & Gardens",
     "address": "370 Zoo Pkwy, Jacksonville, FL 32218",
     "lat": 30.402260588973107,
     "long": -81.64325790418468
@@ -234,7 +234,7 @@
     "long": -74.04758573256743
   },
   {
-    "zoo": "Cape May County Park and Zoo",
+    "zoo": "Cape May County Park & Zoo",
     "address": "707 US-9 North, Cape May Court House, NJ 08210",
     "lat": 39.10229089427952,
     "long": -74.81233416149088
@@ -330,7 +330,7 @@
     "long": -96.23462670416716
   },
   {
-    "zoo": "Animal World and Snake Farm Zoo",
+    "zoo": "Animal World & Snake Farm Zoo",
     "address": "5640 S Interstate 35, New Braunfels, TX 78132",
     "lat": 29.655800875128982,
     "long": -98.18690180421171

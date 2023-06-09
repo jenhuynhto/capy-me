@@ -18,15 +18,12 @@ import os
 
 
 try:
-    with open('../apps/onlycapys/data/capybara_zoos.json', 'r') as file:
+    with open('../apps/onlycapys/data/capybara_zoos.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
 
 except FileNotFoundError:
-    with open('apps/onlycapys/data/capybara_zoos.json', 'rb') as file:
+    with open('apps/onlycapys/data/capybara_zoos.json', 'rb', encoding='utf-8') as file:
         data = json.load(file)
-
-
-
 
 db.define_table('contact',
                 Field('fullname', requires=IS_NOT_EMPTY(), label="Full Name"),
