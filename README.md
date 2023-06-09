@@ -85,7 +85,11 @@ Schedule:
 
 ## Contributors
 <a href="https://github.com/jenhuynhto">Jennifer To</a>
+<br>
 <a href="https://github.com/stevebuibui">Steven Bui</a>
+<br>
 <a href="https://github.com/austinyen56">Austin Yen</a>
+<br>
 <a href="https://github.com/blu-octopus">Daphne Cheng</a>
+<br>
 <a href="https://github.com/anguy243">Alex Nguyen</a>
