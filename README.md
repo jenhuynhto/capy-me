@@ -13,7 +13,7 @@
     <li><a href="#usage/user-stories">Usage/User Stories</a></li>
     <li><a href="#main-pages">Main Pages</a></li>
     <li><a href="#implementation-plan">Implementation Plan</a></li>
-    <li><a href="#contributions">Contributions</a></li>
+    <li><a href="#contributors">Contributors</a></li>
   </ol>
 </details>
 
@@ -54,8 +54,6 @@ _Below is an example of how you can instruct your audience on installing and set
    const API_KEY = 'ENTER YOUR API';
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## Main Pages
 https://www.figma.com/file/xhpThAoGEcpxTyCfcZVV1n/CSE183---Capybara-Project-Proposal?node-id=0%3A88&t=GRIpDimNPT0jz7Yj-1 
 
@@ -85,9 +83,9 @@ Schedule:
 - Stage 2 (Week 7-8): At least: Location implemented; At Most: Location, Animal API
 - Stage 3 (Week 9-10): Polish (styling and reactive elements); If free time: Forum, Matchmaker, Meme Generator pages 
 
-## Contributions
-Jennifer To
-Steven Bui
-Austin Yen
-Daphne Cheng
-Alex Nguyen
+## Contributors
+<a href="https://github.com/jenhuynhto">Jennifer To</a>
+<a href="https://github.com/stevebuibui">Steven Bui</a>
+<a href="https://github.com/austinyen56">Austin Yen</a>
+<a href="https://github.com/blu-octopus">Daphne Cheng</a>
+<a href="https://github.com/anguy243">Alex Nguyen</a>
