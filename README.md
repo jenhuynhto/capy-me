@@ -11,7 +11,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>-->
-    <li><a href="#usage/user-stories">Usage/User Stories</a></li>
+    <li><a href="#usage-and-user-stories">Usage and User Stories</a></li>
     <li><a href="#main-pages">Main Pages</a></li>
     <li><a href="#implementation-plan">Implementation Plan</a></li>
     <li><a href="#contributors">Contributors</a></li>
@@ -73,7 +73,7 @@ https://www.figma.com/file/xhpThAoGEcpxTyCfcZVV1n/CSE183---Capybara-Project-Prop
 ## Data Organization
 https://lucid.app/lucidspark/de716b28-e608-43b0-9915-e16e36c45890/edit?viewport_loc=-567%2C-115%2C3454%2C1686%2C0_0&invitationId=inv_9582b85a-96f6-465f-a9b2-6f4143787be6
 
-## Usage/User Stories
+## Usage and User Stories
 Welcome to OnlyCapys, the premier website for capybara sightings in your area! 
 
 Our website is designed to help you find capybaras near you. To begin, simply enter your location or zip code into the search bar on our homepage. Our system will then generate a map of your area, highlighting any known capybara sightings nearby. In addition to our mapping system, OnlyCapys also provides a wealth of information about capybaras. Our website features articles, videos, and photos that will help you learn more about these fascinating creatures and their habits. We also may have a forum where you can connect with other capybara enthusiasts and share your own sightings and experiences though you will have to sign up for an account to post! In addition, we have been in the works of implementing a random capybara meme generator, and a capybara matchmaker to brighten up your day. You may wonder how we gather data on capybara sightings! We gather information from a variety of sources, including social media platforms, wildlife organizations, and verified user submissions. Through this, we can create a comprehensive map of capybara sightings in your area that is always up-to-date and accurate.
