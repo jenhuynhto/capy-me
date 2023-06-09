@@ -21,9 +21,9 @@
 ## What is OnlyCapys?
 OnlyCapys is a web application that helps users find capybaras near them! Users enter in an address, location, or zip code, and our web application will generate a map of their area, and the location of the closest known capybara location to them. We gather information from a variety of sources, including zoos and verified user submissions, in order to make up our database of known capybara locations.
 <br><br>
-If we are missing any zoos, feel free fill out our Contact Us form, and we will update our database with them once verified.
-<br><br>
 Our web application also includes CapyFact and Rate Zoos. CapyFact provides users with randomly generated capybara images and facts. We hope for it to educate users about these fascinating creatures and their habits. Rate Zoos allow users to 'like' zoos to recommend which zoos are worth a visit to other users.
+<br><br>
+If we are missing any zoos, feel free fill out our Contact Us form, and we will update our database with them.
 
 ## Built With
 <span>
