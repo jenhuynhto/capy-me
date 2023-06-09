@@ -19,14 +19,17 @@
             height: 65vh;
             width: 100%;
           }
+
           .button {
             color: white;
             background-color: #3298dc;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
           }
+
           .button:focus {
             color: white;
           }
+
           .button:hover {
             color: white;
             background-color: #238bd0;
@@ -40,11 +43,12 @@
       <div class="block" style="margin-top: 200px;">
         <h1 class="title is-size-3" style="font-weight: 700;">The Capybara
         </h1>
-        A rodent of unusual size. Is it a beaver without a tail? A hairy pig without a snout? 
-          No, it's a capybara, the largest rodent in the world!
+        A rodent of unusual size. Is it a beaver without a tail? A hairy pig without a snout?
+        No, it's a capybara, the largest rodent in the world!
         </p>
         <div class="buttons">
-          <button class="button" onclick="displayRandomFact()" style="margin-top: 15px;">CapyFact Me <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></button>
+          <button class="button" onclick="displayRandomFact()" style="margin-top: 15px;">CapyFact Me <i
+              class="fa fa-angle-right fa-fw" aria-hidden="true"></i></button>
         </div>
         <!-- Fun Facts text and button -->
         <div class="columns is-mobile has-text-left" style="padding-left: 10px">
@@ -58,7 +62,7 @@
           <div class="column is-mobile">
             <span class="title is-size-5" style="font-weight: 700;" id="fact-number-2"> </span>
             <p class="fact-text-2 has-text-left" id="fact-text-2">
-            </p>      
+            </p>
           </div>
         </div>
       </div>
@@ -72,20 +76,25 @@
         Whether you're longing to see one in-person out of curiousity or simply seek capybara companionship, we've got
         you covered!
       </span>
-      <h1 class="title is-size-4" style="font-weight: 700; margin-top: 40px;">Enter an address to start your capybara quest!</h1>
+      <h1 class="title is-size-4" style="font-weight: 700; margin-top: 20px;">Enter an address to start your capybara
+        quest!</h1>
       <!-- Enter address here -->
       <form id="userForm">
         <input type="text" id="userAddress" name="userAddress" placeholder="123 Capybara Ave., Santa Cruz, CA 95060">
       </form>
-      <button class="button"onClick="updateMap()">
+      <button class="button" onClick="updateMap()" style="margin-bottom: 20px;">
         Find Now
         <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
       </button>
+      <br>
+      <div class="title is-size-4"> 
+        <span id="closestZoo"></span>
+      </div>
 
       <!--fun fact image block -->
       <div class="block" style="margin-top: 250px;">
-        <img id="fact-image" style="border-radius: 20px; height: 400px; width: auto" class="is-mobile" 
-          src="../static/images/capybara1.png" alt="Adult Capybara with 2 Baby Capybara"/>
+        <img id="fact-image" style="border-radius: 20px; height: 400px; width: auto" class="is-mobile"
+          src="../static/images/capybara1.png" alt="Adult Capybara with 2 Baby Capybara" />
       </div>
 
     </div>
@@ -93,8 +102,8 @@
 
   <div class="columns is-mobile" style="margin-top: 50px; margin-bottom: 15px;">
     <div class="column is-half is-mobile has-text-left">
-        <img id="fact-image" style="border-radius: 20px;" class="is-mobile" 
-          src="../static/images/capybara_bath.png" alt="Adult Capybara with 2 Baby Capybara"/>
+      <img id="fact-image" style="border-radius: 20px;" class="is-mobile" src="../static/images/capybara_bath.png"
+        alt="Adult Capybara with 2 Baby Capybara" />
     </div>
     <div class="column is-mobile has-text-left" style="margin-top: 130px;">
       <span class="title is-size-4" style="font-weight: 700;">Contact</span>
@@ -114,159 +123,180 @@
 [[block page_scripts]]
 <script>
   // Updates map when pressing enter
-  document.getElementById('userForm').addEventListener('submit', function(e) {
+  document.getElementById('userForm').addEventListener('submit', function (e) {
     updateMap();
     e.preventDefault();
   }, false);
 
   function initMap() {
-  var geocoder = new google.maps.Geocoder();
+    var geocoder = new google.maps.Geocoder();
 
-  // Get the user's IP geolocation data
-  fetch('https://ipapi.co/json/')
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      var userLat = data.latitude;
-      var userLng = data.longitude;
+    // Get the user's IP geolocation data
+    fetch('https://ipapi.co/json/')
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        var userLat = data.latitude;
+        var userLng = data.longitude;
 
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: userLat, lng: userLng },
-        zoom: 4
-      });
-
-      fetch('https://raw.githubusercontent.com/jenhuynhto/cse183-final/main/apps/onlycapys/data/capybara_zoos.json')
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
-          data.forEach(function (entry) {
-            var marker = new google.maps.Marker({
-              position: { lat: entry.lat, lng: entry.long },
-              map: map,
-              title: entry.zoo
-            });
-          });
-        })
-        .catch(function (error) {
-          console.log('Error fetching JSON file:', error);
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: { lat: userLat, lng: userLng },
+          zoom: 4
         });
-    })
-    .catch(function (error) {
-      console.log('Error fetching user location:', error);
-    });
+
+        fetch('https://raw.githubusercontent.com/jenhuynhto/cse183-final/main/apps/onlycapys/data/capybara_zoos.json')
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            data.forEach(function (entry) {
+              var marker = new google.maps.Marker({
+                position: { lat: entry.lat, lng: entry.long },
+                map: map,
+                title: entry.zoo
+              });
+            });
+          })
+          .catch(function (error) {
+            console.log('Error fetching JSON file:', error);
+          });
+      })
+      .catch(function (error) {
+        console.log('Error fetching user location:', error);
+      });
   }
 
 
 
-//   function initMap() {
-//   var geocoder = new google.maps.Geocoder();
+  //   function initMap() {
+  //   var geocoder = new google.maps.Geocoder();
 
-//   var locationName = "Santa Cruz, CA";
+  //   var locationName = "Santa Cruz, CA";
 
-//   geocoder.geocode({ address: locationName }, function (results, status) {
-//     if (status === google.maps.GeocoderStatus.OK) {
-//       var map = new google.maps.Map(document.getElementById('map'), {
-//         // center: {lat: 37.7749, lng: -122.4194}, // Specify the initial map center
-//         center: results[0].geometry.location, // Use the first result's coordinates as the center
-//         zoom: 7 // Lower number is zoomed out, higher number is zoomed in
-//       });
+  //   geocoder.geocode({ address: locationName }, function (results, status) {
+  //     if (status === google.maps.GeocoderStatus.OK) {
+  //       var map = new google.maps.Map(document.getElementById('map'), {
+  //         // center: {lat: 37.7749, lng: -122.4194}, // Specify the initial map center
+  //         center: results[0].geometry.location, // Use the first result's coordinates as the center
+  //         zoom: 7 // Lower number is zoomed out, higher number is zoomed in
+  //       });
 
 
-//       fetch('https://raw.githubusercontent.com/jenhuynhto/cse183-final/main/apps/onlycapys/data/capybara_zoos.json') // Fetch the JSON file
-//         .then(function (response) {
-//           console.log(response)
-//           return response.json(); // Parse the JSON data
-//         })
-//         .then(function (data) {
-//           // Iterate over each entry in the JSON data
-//           data.forEach(function (entry) {
-//             var marker = new google.maps.Marker({
-//               position: { lat: entry.lat, lng: entry.long }, // Use the entry's coordinates
-//               map: map,
-//               title: entry.zoo // Use the entry's zoo as the marker title
-//             });
-//           });
-//         })
-//         .catch(function (error) {
-//           console.log('Error fetching JSON file:', error);
-//         });
-      
-//       // var marker = new google.maps.Marker({
-//       //   position: results[0].geometry.location,
-//       //   map: map,
-//       //   title: "Marker Title", // Optional: You can add a title to the marker       
-//       // });
+  //       fetch('https://raw.githubusercontent.com/jenhuynhto/cse183-final/main/apps/onlycapys/data/capybara_zoos.json') // Fetch the JSON file
+  //         .then(function (response) {
+  //           console.log(response)
+  //           return response.json(); // Parse the JSON data
+  //         })
+  //         .then(function (data) {
+  //           // Iterate over each entry in the JSON data
+  //           data.forEach(function (entry) {
+  //             var marker = new google.maps.Marker({
+  //               position: { lat: entry.lat, lng: entry.long }, // Use the entry's coordinates
+  //               map: map,
+  //               title: entry.zoo // Use the entry's zoo as the marker title
+  //             });
+  //           });
+  //         })
+  //         .catch(function (error) {
+  //           console.log('Error fetching JSON file:', error);
+  //         });
 
-//       // var marker2 = new google.maps.Marker({
-//       //   position: {lat: 37.7749, lng: -122.4194},
-//       //   map: map,
-//       //   title: "Marker Title" // Optional: You can add a title to the marker
-//       // });
-      
-//     } else {
-//       console.log('Geocode was not successful for the following reason: ' + status);
-//     }
-//   });
-// }
+  //       // var marker = new google.maps.Marker({
+  //       //   position: results[0].geometry.location,
+  //       //   map: map,
+  //       //   title: "Marker Title", // Optional: You can add a title to the marker       
+  //       // });
 
-// Updates map depending on user address input
-function updateMap() {
-  var geocoder = new google.maps.Geocoder();
-  var locationName = document.getElementById("userAddress").value;
-  // document.getElementById("result").innerHTML = document.getElementById("userAddress").value;
+  //       // var marker2 = new google.maps.Marker({
+  //       //   position: {lat: 37.7749, lng: -122.4194},
+  //       //   map: map,
+  //       //   title: "Marker Title" // Optional: You can add a title to the marker
+  //       // });
 
-  geocoder.geocode({ address: locationName }, function (results, status) {
-    if (status === google.maps.GeocoderStatus.OK) {
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: results[0].geometry.location,
-        zoom: 10
-      });
+  //     } else {
+  //       console.log('Geocode was not successful for the following reason: ' + status);
+  //     }
+  //   });
+  // }
 
-      fetch('https://raw.githubusercontent.com/jenhuynhto/cse183-final/main/apps/onlycapys/data/capybara_zoos.json') // Fetch the JSON file
-        .then(function (response) {
-          return response.json(); // Parse the JSON data
-        })
-        .then(function (data) {
-          data.forEach(function (entry) {
-            var marker = new google.maps.Marker({
-              position: { lat: entry.lat, lng: entry.long },
-              map: map,
-              title: entry.zoo
-            });
-          });
-        })
-        .catch(function (error) {
-          console.log('Error fetching JSON file:', error);
-        });
-    } else {
-      console.log('Geocode was not successful for the following reason: ' + status);
-    }
-  });
+  function toRad(x) {
+    return x * Math.PI / 180;
+  }
+
+  function calculateDistance(lat1, lng1, lat2, lng2) {
+  const R = 6371; // Radius of the Earth in kilometers
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lng2 - lng1); // Fix: Replace lon2 with lng2 and lon1 with lng1
+  const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const distance = R * c; // Distance in kilometers
+  return distance;
 }
 
-// function updateMap() {
-//     var geocoder = new google.maps.Geocoder();
-    
-//     var locationName = document.getElementById("result").innerHTML;
+  // Updates map depending on user address input
+  function updateMap() {
+    var geocoder = new google.maps.Geocoder();
+    var locationName = document.getElementById("userAddress").value;
 
-//     geocoder.geocode({ address: locationName }, function (results, status) {
-//       if (status === google.maps.GeocoderStatus.OK) {
-//         var map = new google.maps.Map(document.getElementById('map'), {
-//           // center: {lat: 37.7749, lng: -122.4194}, // Specify the initial map center
-//           center: results[0].geometry.location, // Use the first result's coordinates as the center
-//           zoom: 7 // Lower number is zoomed out, higher number is zoomed in
-//         });
+    geocoder.geocode({ address: locationName }, function (results, status) {
+      if (status === google.maps.GeocoderStatus.OK) {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: results[0].geometry.location,
+          zoom: 10
+        });
 
-//       } else {
-//         console.log('Geocode was not successful for the following reason: ' + status);
-//       }
-//     });
-// }
+        var lat = results[0].geometry.location.lat();
+        var lng = results[0].geometry.location.lng();
+        var distances = [];
+        var zooMarkers = [];
+        var nearestMarker;
+        var nearestDistance = Infinity;
+
+        console.log("Latitude:", lat);
+        console.log("Longitude:", lng);
+
+        fetch('https://raw.githubusercontent.com/jenhuynhto/cse183-final/main/apps/onlycapys/data/capybara_zoos.json')
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            data.forEach(function (entry) {
+              var marker = new google.maps.Marker({
+                position: { lat: entry.lat, lng: entry.long },
+                map: map,
+                title: entry.zoo
+              });
+              zooMarkers.push(marker);
+            });
+
+            zooMarkers.forEach(function (marker) {
+              var distance = calculateDistance(lat, lng, marker.position.lat(), marker.position.lng());
+              if (distance < nearestDistance) {
+                nearestMarker = marker;
+                nearestDistance = distance;
+              }
+            });
+
+            console.log("Nearest Marker:", nearestMarker);
+            console.log("Distance:", nearestDistance.toFixed(2), "km");
+            console.log("Closest Zoo:", nearestMarker.title);
+            var spanElement = document.getElementById("closestZoo");
+            spanElement.innerHTML = "The nearest Capybara to you is at:<br>" + nearestMarker.title;
+          })
+          .catch(function (error) {
+            console.log('Error fetching JSON file:', error);
+          });
+      } else {
+        console.log('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+  }
 
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz7rHQYL7rRV6ii-oX_9MWoghMDRoZSss&callback=initMap"></script>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz7rHQYL7rRV6ii-oX_9MWoghMDRoZSss&callback=initMap"></script>
 
 <!-- js script for fun fact -->
 <script>
@@ -304,23 +334,23 @@ function updateMap() {
     // updating fact number
     // + 1 for index, +2 for the first 2 facts already shown
     factNumber.textContent = "Fun Fact #" + (randomIndex + 3);
-    
+
     var factIndexTwo = randomIndex + 3;
 
     // random index #2 for 2nd fact, goes back to index 0 if reached end of list
-    if(randomIndex >= facts.length-1){
-      randomIndex= -1;
+    if (randomIndex >= facts.length - 1) {
+      randomIndex = -1;
       // updating the 2nd fact number
       factIndexTwo = factIndexTwo - facts.length;
     }
-    const factTwo = facts[randomIndex+1];
-    
+    const factTwo = facts[randomIndex + 1];
+
     // random index #3 for image
-    const randomIndex3 = Math.floor(Math.random() * 100) + 1;    
+    const randomIndex3 = Math.floor(Math.random() * 100) + 1;
 
     // updating image and facts by id
     factImage.src = `https://api.capy.lol/v1/capybara/${randomIndex3}`;
-    factImage.alt="Capybara Image"
+    factImage.alt = "Capybara Image"
     factNumberTwo.textContent = "Fun Fact #" + (factIndexTwo + 1);
     factText.textContent = fact;
     factTextTwo.textContent = factTwo;
