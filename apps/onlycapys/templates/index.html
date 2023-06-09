@@ -133,7 +133,7 @@
       <br>
       <span class="title is-size-4" style="font-weight: 700; ">Based In</span>
       <br>
-      <span>California</span>
+      <span>California, USA</span>
     </div>
   </div>
 </div>
@@ -273,13 +273,19 @@ function updateMap() {
       return;
     }
 
-    const randomIndex = Math.floor(Math.random() * facts.length);
+    var randomIndex = Math.floor(Math.random() * facts.length);
+    // console.log("facts.length is", facts.length);
+    // var randomIndex = facts.length;
     const fact = facts[randomIndex];
+    // log fact #1
+    console.log("getting fact #1 from index ", randomIndex);
 
-    if(randomIndex>72){
-      randomIndex=-1;
+    if(randomIndex >= facts.length-1){
+      randomIndex= -1;
     }
     const factTwo = facts[randomIndex+1];
+    // log fact #1
+    console.log("getting fact #2 from index ", randomIndex+1);
 
     const factImage = document.getElementById("fact-image");
     const popup = document.getElementById("popup");
@@ -288,6 +294,9 @@ function updateMap() {
 
     
     const randomIndex2 = Math.floor(Math.random() * 100) + 1;
+    // log the image link
+    console.log("getting image `https://api.capy.lol/v1/capybara/", randomIndex2);
+    
     // updating image and fact
     factImage.src = `https://api.capy.lol/v1/capybara/${randomIndex2}`;
     factImage.alt="Capybara Image"
