@@ -13,12 +13,15 @@
 <div class="section">
   <div class="columns is-mobile" style="padding-top: 40px;">
     <div class="column is-half is-mobile" style="padding-top: 30px;">
-
       <div class="block">
         <style>
           #map {
             height: 65vh;
             width: 100%;
+          }
+
+          .button{
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
           }
         </style>
         <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz7rHQYL7rRV6ii-oX_9MWoghMDRoZSss"></script> -->
@@ -32,8 +35,8 @@
         <p>A rodent of unusual size. Is it a beaver without a tail? A hairy pig without a snout? 
           No, it's a capybara, the largest rodent in the world!
         </p>
-        <div class="buttons ">
-          <button class="button is-info" onclick="displayRandomFact()">Fact</button>
+        <div class="buttons">
+          <button class="button is-info" onclick="displayRandomFact()">CapyFact Me <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></button>
         </div>
 
         <!-- Fun Facts text and button -->
@@ -73,9 +76,6 @@
         Find Now
         <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
       </button>
-
-      <p>You inputted: <span id="result"></span></p>
-
 
       <!--fun fact image block -->
       <div class="block" style="margin-top: 250px;">
@@ -241,7 +241,7 @@
 function updateMap() {
   var geocoder = new google.maps.Geocoder();
   var locationName = document.getElementById("userAddress").value;
-  document.getElementById("result").innerHTML = document.getElementById("userAddress").value;
+  // document.getElementById("result").innerHTML = document.getElementById("userAddress").value;
 
   geocoder.geocode({ address: locationName }, function (results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
