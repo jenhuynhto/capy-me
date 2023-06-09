@@ -52,7 +52,6 @@
               Capybaras are the largest rodents in the world! Reaching weights of up to 150lbs 
             </p>      
           </div>
-
         </div>
       </div>
     </div>
@@ -67,9 +66,8 @@
       </p>
       <h1 class="title is-size-4" style="font-weight: 700; margin-top: 40px;">Enter an address to start your capybara quest!</h1>
       <!-- Enter address here -->
-      <form>
+      <form id="userForm">
         <input type="text" id="userAddress" name="userAddress" placeholder="123 Capybara Ave., Santa Cruz, CA 95060">
-
       </form>
       <button class="button is-info"onClick="updateMap()">
         Find Now
@@ -141,6 +139,12 @@
 
 [[block page_scripts]]
 <script>
+  // Updates map when pressing enter
+  document.getElementById('userForm').addEventListener('submit', function(e) {
+    updateMap();
+    e.preventDefault();
+  }, false);
+
   function initMap() {
   var geocoder = new google.maps.Geocoder();
 
@@ -233,6 +237,7 @@
 //   });
 // }
 
+// Updates map depending on user address input
 function updateMap() {
   var geocoder = new google.maps.Geocoder();
   var locationName = document.getElementById("userAddress").value;
