@@ -21,6 +21,7 @@
 For our project, we plan to make a capybara locator to help users find capybaras near them! Users will be able to enter their location or zip code, and we will then generate a map of their area, highlighting the closest known capybara location to them. To implement this, we plan to gather information from a variety of sources, including social media platforms, wildlife organizations, and verified user submissions. In addition to the mapping, we plan to provide information on capybaras to educate users. The educational content will consist of articles, videos, and photos to help users learn about these fascinating creatures and their habits. If we have enough time, we will implement a forum where users can connect with other capybara enthusiasts and share their personal sightings and experiences, potentially a random capybara meme generator where users can click a button to see a random capybara meme, and more. To create our website, we plan to use Py4Web and Vue.js! Our team is also open to reducing our scope of what to implement if we run short on time.
 
 ## Built With
+<span>
 <!-- py4web -->
 <a href="https://py4web.com/" target="_blank" rel="noreferrer"> <img src="https://py4web.com/static/images/logo.png"
  alt="py4web" width="40" height="40"/> </a>
@@ -28,6 +29,7 @@ For our project, we plan to make a capybara locator to help users find capybaras
  <a href="https://vuejs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" width="40" height="40"/> </a>
 <!-- bulma -->
 <a href="https://bulma.io/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/gilbarbara/logos/804dc257b59e144eaca5bc6ffd16949752c6f789/logos/bulma.svg" alt="bulma" width="40" height="40"/> </a>
+</span>
 
 ## Getting Started
 
