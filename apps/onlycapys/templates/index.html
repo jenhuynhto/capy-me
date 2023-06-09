@@ -13,20 +13,21 @@
 <div class="section">
   <div class="columns is-mobile" style="padding-top: 40px;">
     <div class="column is-half is-mobile" style="padding-top: 30px;">
-      <div class="block">
-        <!-- <img id="map" style="border-radius: 20px; width:90%; height: auto; " src="../static/images/tempmap.png" alt="Map of Santa Cruz, CA"> -->
-        <style>
 
+      <div class="block">
+        <style>
           #map {
-            height: 500px;
-            width: auto;
-          
+            height: 65vh;
+            width: 100%;
           }
         </style>
+
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz7rHQYL7rRV6ii-oX_9MWoghMDRoZSss"></script>
         <div id="map" class="is-loading"></div>
       </div>
-      <div class="block" style="margin-top: 300px;">
+
+      <!-- beginning of capybara fun fact text block -->
+      <div class="block" style="margin-top: 200px;">
         <h1 class="title is-size-3" style="font-weight: 700;">The Capybara
         </h1>
         <p>A rodent of unusual size. Is it a beaver without a tail? A hairy pig without a snout? 
@@ -57,7 +58,9 @@
       </div>
     </div>
 
+    <!-- beginning of top right column -->
     <div class="column is-mobile">
+      <!-- capybara text block for map -->
       <h1 class="title is-size-3" style="font-weight: 700;">Locating Capybaras near you — easy, fast, and frictionless.</h1>
       <p>Explore a comprehensive interactive map that showcases capybara locations across the United States.
         Whether you're longing to see one in-person out of curiousity or simply seek capybara companionship, we've got
@@ -69,7 +72,7 @@
         <input type="text" id="userAddress" name="userAddress" placeholder="123 Capybara Ave., Santa Cruz, CA 95060">
 
       </form>
-      <button class="button" style="background-color: #327bea; color: white; font-weight: 500; width: 120px;" onClick="updateMap()">
+      <button class="button is-info"onClick="updateMap()">
         Find Now
         <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
       </button>
@@ -77,8 +80,8 @@
       <p>You inputted: <span id="result"></span></p>
 
 
-      <!--fun fact image -->
-      <div class="block" style="margin-top: 350px;">
+      <!--fun fact image block -->
+      <div class="block" style="margin-top: 250px;">
         <img id="fact-image" style="border-radius: 20px; height: 400px; width: auto" class="is-mobile" 
           src="../static/images/capybara1.png" alt="Adult Capybara with 2 Baby Capybara"/>
       </div>
@@ -282,6 +285,7 @@ function updateMap() {
 
     // random index for getting fact
     var randomIndex = Math.floor(Math.random() * facts.length);
+    // var randomIndex = facts.length - 1;
     const fact = facts[randomIndex];
 
     // updating fact number
