@@ -31,24 +31,29 @@
         </h1>
         <p>In the wetlands, only <em>one</em> remarkable creature reigns supreme — the capybara, nature's gentle giant.
           With their impressive size, sleek body, and playful nature, these charismatic beings
-          captivate hearts.</p>
+          captivate hearts.
+        </p>
+        <div class="buttons ">
+          <button class="button is-info" onclick="displayRandomFact()">Fact</button>
+        </div>
 
         <!-- Fun Facts text and button -->
-        <div class="columns is-mobile" style="padding-left: 10px">
-          <!-- random generate fun fact text -->
-          <div class="column is half is-mobile">
-            <span class="title is-size-5" style="font-weight: 700;">Fun Fact</span>
-            <p class="fact-text" id="fact-text">
+        <div class="columns is-mobile has-text-left" style="padding-left: 10px">
+          <!-- random generate fun fact text #1-->
+          <div class="column is-half is-mobile">
+            <span class="title is-size-5" style="font-weight: 700;">Fun Fact #1</span>
+            <p class="fact-text has-text-left	" id="fact-text">
               Capybaras are the largest rodents in the world! Reaching weights of up to 150lbs 
             </p>
           </div>
-          <!-- button to generate fun fact -->
+          <!-- random generate fun fact text #2-->
           <div class="column is-mobile">
-            <span class="title is-size-5" style="font-weight: 700;">Get a Fact</span>
-            <div class="buttons is-centered my-5 ">
-              <button class="button is-info" onclick="displayRandomFact()">Fact</button>
-            </div>          
+            <span class="title is-size-5" style="font-weight: 700;">Fun Fact #2</span>
+            <p class="fact-text-2 has-text-left" id="fact-text-2">
+              Capybaras are the largest rodents in the world! Reaching weights of up to 150lbs 
+            </p>      
           </div>
+
         </div>
       </div>
     </div>
@@ -74,7 +79,7 @@
 
 
       <!--fun fact image -->
-      <div class="block" style="margin-top: 280px;">
+      <div class="block" style="margin-top: 350px;">
         <img id="fact-image" style="border-radius: 20px; height: 400px; width: auto" class="is-mobile" 
           src="../static/images/capybara1.png" alt="Adult Capybara with 2 Baby Capybara"/>
       </div>
@@ -269,9 +274,15 @@ function updateMap() {
     const randomIndex = Math.floor(Math.random() * facts.length);
     const fact = facts[randomIndex];
 
+    if(randomIndex>72){
+      randomIndex=-1;
+    }
+    const factTwo = facts[randomIndex+1];
+
     const factImage = document.getElementById("fact-image");
     const popup = document.getElementById("popup");
     const factText = document.getElementById("fact-text");
+    const factTextTwo = document.getElementById("fact-text-2");
 
     
     const randomIndex2 = Math.floor(Math.random() * 100) + 1;
@@ -279,6 +290,7 @@ function updateMap() {
     factImage.src = `https://api.capy.lol/v1/capybara/${randomIndex2}`;
     factImage.alt="Capybara Image"
     factText.textContent = fact;
+    factTextTwo.textContent = factTwo;
   }
 </script>
 [[end]]
