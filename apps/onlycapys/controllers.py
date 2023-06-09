@@ -47,10 +47,6 @@ def index():
     #    print(response.text)
     #else:
     #    print("Error:", response.status_code, response.text)
-   
-    form = Form(db.contact, csruf_session=session, formstyle=FormStyleBulma)
-    if form.accepted:
-        redirect(URL('index'))
     return dict(form=form)
 
 
