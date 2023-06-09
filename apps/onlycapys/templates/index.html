@@ -71,7 +71,8 @@
     <!-- beginning of top right column -->
     <div class="column is-mobile">
       <!-- capybara text block for map -->
-      <h1 class="title is-size-3" style="font-weight: 700;">Locating Capybaras near you — easy, fast, and frictionless.</h1>
+      <h1 class="title is-size-3" style="font-weight: 700;">Locating Capybaras near you — easy, fast, and frictionless.
+      </h1>
       <span>Explore a comprehensive interactive map that showcases capybara locations across the United States.
         Whether you're longing to see one in-person out of curiousity or simply seek capybara companionship, we've got
         you covered!
@@ -87,7 +88,7 @@
         <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
       </button>
       <br>
-      <div class="title is-size-4"> 
+      <div class="title is-size-4">
         <span id="closestZoo"></span>
       </div>
 
@@ -225,19 +226,51 @@
   }
 
   function calculateDistance(lat1, lng1, lat2, lng2) {
-  const R = 6371; // Radius of the Earth in kilometers
-  const dLat = toRad(lat2 - lat1);
-  const dLon = toRad(lng2 - lng1); // Fix: Replace lon2 with lng2 and lon1 with lng1
-  const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  const distance = R * c; // Distance in kilometers
-  return distance;
-}
+    const R = 6371; // Radius of the Earth in kilometers
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lng2 - lng1); // Fix: Replace lon2 with lng2 and lon1 with lng1
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const distance = R * c; // Distance in kilometers
+    return distance;
+  }
+
+  function initMap() {
+    var directionsService = new google.maps.DirectionsService();
+    var directionsRenderer = new google.maps.DirectionsRenderer();
+    var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+    var mapOptions = {
+      zoom: 7,
+      center: chicago
+    }
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    directionsRenderer.setMap(map);
+  }
+
+  function calcRoute() {
+    var start = document.getElementById('start').value;
+    var end = document.getElementById('end').value;
+    var request = {
+      origin: start,
+      destination: end,
+      travelMode: 'DRIVING'
+    };
+    directionsService.route(request, function (result, status) {
+      if (status == 'OK') {
+        directionsRenderer.setDirections(result);
+      }
+    });
+  }
+
 
   // Updates map depending on user address input
   function updateMap() {
     var geocoder = new google.maps.Geocoder();
     var locationName = document.getElementById("userAddress").value;
+    var start = locationName;
+    var end;
+    var directionsService = new google.maps.DirectionsService();
+    var directionsRenderer = new google.maps.DirectionsRenderer();
 
     geocoder.geocode({ address: locationName }, function (results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
@@ -245,6 +278,7 @@
           center: results[0].geometry.location,
           zoom: 10
         });
+        directionsRenderer.setMap(map);
 
         var lat = results[0].geometry.location.lat();
         var lng = results[0].geometry.location.lng();
@@ -283,6 +317,19 @@
             console.log("Closest Zoo:", nearestMarker.title);
             var spanElement = document.getElementById("closestZoo");
             spanElement.innerHTML = "The nearest Capybara to you is at:<br>" + nearestMarker.title;
+            end = nearestMarker.title;
+
+            var request = {
+              origin: start,
+              destination: end,
+              travelMode: 'DRIVING'
+            };
+
+            directionsService.route(request, function (result, status) {
+              if (status == 'OK') {
+                directionsRenderer.setDirections(result);
+              }
+            });
           })
           .catch(function (error) {
             console.log('Error fetching JSON file:', error);
