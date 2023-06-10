@@ -1,12 +1,24 @@
 [[extend 'layout.html']]
 <div class="section" id="vue-target" v-cloak>
     [[=form]]
-    <div v-for="fact in facts">
-       {{fact.facts}}
+    <div class="box" v-for="fact in facts">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                  <span class="icon is-small">
+                    <i class="fa fa-user"></i>
+                  </span>
+                  <span class="ml-2">{{fact.usernames}}</span>
+        </nav>
+        <div class="content">
+            {{fact.facts}}
+          </div>
+       
     </div>
 </div>
 
+    
 
 <script>
     let get_capyfacts_url = "[[=XML(get_capyfacts_url)]]";
+ 
 </script>
