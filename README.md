@@ -85,7 +85,7 @@ Contact Us Page Before Form Submit
 Contact Us Page After Form Submit
 <img src="apps/onlycapys/static/images/contactus_submit.png" alt="Contact Us Page After Form Submit"/>
 Contact Us Email Received By (onlycapys@gmail.com)
-<img src="apps/onlycapys/static/images/form_email.png" alt="Contact Us Email Received By (onlycapys@gmail.com)"/>
+<img src="apps/onlycapys/static/images/form_email.PNG" alt="Contact Us Email Received By (onlycapys@gmail.com)"/>
 
 ### Rate Zoos
 Insert Rate Zoos img here
