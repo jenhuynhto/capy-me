@@ -173,4 +173,113 @@ success!
 success!
 success!
 success!
+<<<<<<< Updated upstream
+=======
+timestamp: 2023-06-09T13:48:47.693888
+ALTER TABLE "liked" ADD "zooid" INTEGER REFERENCES "zoo" ("id") ON DELETE CASCADE ON UPDATE CASCADE  ;
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2023-06-09T14:07:27.530998
+CREATE TABLE "post"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "user_email" CHAR(512),
+    "post_text" TEXT,
+    "ts" TIMESTAMP
+);
+success!
+success!
+success!
+success!
+success!
+timestamp: 2023-06-09T16:32:42.320959
+CREATE TABLE "followers"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "follower_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2023-06-09T16:32:42.331958
+ALTER TABLE "post" ADD "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ;
+timestamp: 2023-06-09T16:32:42.336960
+ALTER TABLE "post" ADD "content" TEXT;
+timestamp: 2023-06-09T16:32:42.341959
+ALTER TABLE "post" ADD "timestamp" TIMESTAMP;
+timestamp: 2023-06-09T16:32:42.347960
+ALTER TABLE "post" ADD "replycount" INTEGER;
+success!
+timestamp: 2023-06-09T16:52:22.184540
+ALTER TABLE "post" ADD "like" INTEGER;
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2023-06-09T16:59:55.945591
+ALTER TABLE "zoo" ADD "liked" CHAR(512);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2023-06-09T17:30:19.891563
+CREATE TABLE "capyfacts"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  
+);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2023-06-09T17:47:16.286028
+ALTER TABLE "capyfacts" ADD "facts" CHAR(512);
+timestamp: 2023-06-09T17:47:16.291026
+ALTER TABLE "capyfacts" ADD "created_on" TIMESTAMP;
+timestamp: 2023-06-09T17:47:16.296025
+ALTER TABLE "capyfacts" ADD "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ;
+timestamp: 2023-06-09T17:47:16.301025
+ALTER TABLE "capyfacts" ADD "modified_on" TIMESTAMP;
+timestamp: 2023-06-09T17:47:16.306027
+ALTER TABLE "capyfacts" ADD "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ;
+timestamp: 2023-06-09T17:47:16.312026
+ALTER TABLE "capyfacts" ADD "is_active" CHAR(1);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+>>>>>>> Stashed changes
 success!
