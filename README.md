@@ -101,12 +101,19 @@ After Fact
 ## Data Organization
 https://lucid.app/lucidspark/de716b28-e608-43b0-9915-e16e36c45890/edit?viewport_loc=-567%2C-115%2C3454%2C1686%2C0_0&invitationId=inv_9582b85a-96f6-465f-a9b2-6f4143787be6
 
-## Usage and User Stories
+## Usage
 Welcome to OnlyCapys, the premier website for capybara sightings in your area! 
 
 Our website is designed to help you find capybaras near you. To begin, simply enter your location or zip code into the search bar on our homepage. Our system will then generate a map of your area, highlighting any known capybara sightings nearby. In addition to our mapping system, OnlyCapys also provides a wealth of information about capybaras. Our website features articles, videos, and photos that will help you learn more about these fascinating creatures and their habits. We also may have a forum where you can connect with other capybara enthusiasts and share your own sightings and experiences though you will have to sign up for an account to post! In addition, we have been in the works of implementing a random capybara meme generator, and a capybara matchmaker to brighten up your day. You may wonder how we gather data on capybara sightings! We gather information from a variety of sources, including social media platforms, wildlife organizations, and verified user submissions. Through this, we can create a comprehensive map of capybara sightings in your area that is always up-to-date and accurate.
 
 Overall, OnlyCapys is the perfect website for anyone who loves capybaras and wants to learn more about these amazing creatures. Whether you are a wildlife enthusiast, photographer, or simply curious about capybaras, our website has everything you need to find and track these gentle giants in your area.
+
+## User Stories (As a user, I want to...)
+
+- Find the nearest zoo that has capybaras from my current location so that I can visit them.
+- Be able to submit a new capybara location if I come across one, so that the website can keep its information up-to-date.
+- Have the website provide me with random fun facts about capybaras so that I can learn more about them and be entertained.
+- Have the website show me directions to the nearest zoo that has capybaras from my current location so that I can easily navigate there.
 
 ## Implementation Plan
 Page Layout/Design/Styling:
