@@ -63,13 +63,9 @@ def form():
     return dict()
 
 
-@action("alert")
-@action.uses("Alert.html", auth, T)
-def form():
-    return dict()
 
 @action("zoos", method=["GET", "POST"])
-@action.uses("zoos.html", auth, T)
+@action.uses("zoos.html", auth.user, T)
 def zoo():
     form = Form(db.capyfacts, csruf_session=session, formstyle=FormStyleBulma)
     if form.accepted:
@@ -78,9 +74,9 @@ def zoo():
                 get_capyfacts_url = URL('capyfact'))
 
 @action("capyfact", method=["GET", "POST"])
-@action.uses(db)
+@action.uses(db, auth.user)
 def facts():
-    facts = db(db.capyfacts).select()
+    facts = db(db.capyfacts).select(orderby=~db.capyfacts.id, limitby=(0, 1))
     print("facts: ", facts)
     return dict(facts=facts)
 

@@ -35,7 +35,7 @@ db.define_table('zoo',
 db.define_table('capyfacts',
                 
                 Field('facts'),
-                
+                auth.signature,
                 )
 
 # Make a GET request to fetch the facts from the API
