@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 // This will be the object that will contain the Vue attributes
 // and be used to initialize it.
 
@@ -47,61 +46,8 @@ let init = function () {
   // Put here any initialization code.
 
   return self;
-=======
-function clone(obj) {
-  return JSON.parse(JSON.stringify(obj));
-}
-
-// This will be the object that will contain the Vue attributes
-// and be used to initialize it.
-let app = {};
-
-// Given an empty app object, initializes it filling its attributes,
-// creates a Vue instance, and then initializes the Vue instance.
-let init = (app) => {
-
-  // This is the Vue data.
-  app.data = {
-    facts: []
-  };
-
-  app.enumerate = (a) => {
-    // This adds an _idx field to each element of the array.
-    let k = 0;
-    a.map((e) => {
-      e._idx = k++;
-    });
-    return a;
-  };
-
-  // This contains all the methods.
-  app.methods = {};
-
-
-  // This creates the Vue instance.
-  app.vue = new Vue({
-    el: "#vue-target",
-    data: app.data,
-    methods: app.methods
-  });
-
-  // And this initializes it.
-  app.init = () => {
-    axios.get(get_capyfacts_url).then(function (response) {
-      app.vue.facts = app.enumerate(response.data.facts);
-      console.log("app.vue.facts: ", app.vue.users);
-    });
-  };
-
-  // Call to the initializer.
-  app.init();
->>>>>>> Stashed changes
 };
 
 // This takes the (empty) app object, and initializes it,
 // putting all the code in it. 
-<<<<<<< Updated upstream
 var app = init();
-=======
-init(app);
->>>>>>> Stashed changes
