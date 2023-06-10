@@ -73,18 +73,14 @@ _Below is an example of how you can instruct your audience on installing and set
 ### Index Page Before & After Search
 <img src="apps/onlycapys/static/images/index.png" alt="Index Page Before Search"/>
 <img src="apps/onlycapys/static/images/index1.png" alt="Index Page After Search"/>
-https://www.figma.com/file/xhpThAoGEcpxTyCfcZVV1n/CSE183---Capybara-Project-Proposal?node-id=0%3A88&t=GRIpDimNPT0jz7Yj-1 
-<br><br>
+
 ### Our Team
-<br>
-### Insert Our Team img here
-<br><br>
+Insert Our Team img here
+
 ### Contact Us
-<br>
 <img src="apps/onlycapys/static/images/contactus.png" alt="Contact Us Page"/>
-<br><br>
+
 ### Rate Zoos
-<br>
 Insert Rate Zoos img here
 
 ## Data Organization
