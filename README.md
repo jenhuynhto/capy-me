@@ -70,8 +70,23 @@ _Below is an example of how you can instruct your audience on installing and set
 -->
 
 ## Main Pages
-<img src="index.png" alt="Index Page"/>
+Index
+<br>
+<img src="apps/onlycapys/static/images/index.png" alt="Index Page Before Search"/>
+<img src="apps/onlycapys/static/images/index1.png" alt="Index Page After Search"/>
 https://www.figma.com/file/xhpThAoGEcpxTyCfcZVV1n/CSE183---Capybara-Project-Proposal?node-id=0%3A88&t=GRIpDimNPT0jz7Yj-1 
+<br><br>
+Our Team
+<br>
+Insert Our Team img here
+<br><br>
+Contact Us
+<br>
+Insert Contact Us img here
+<br><br>
+Rate Zoos
+<br>
+Insert Rate Zoos img here
 
 ## Data Organization
 https://lucid.app/lucidspark/de716b28-e608-43b0-9915-e16e36c45890/edit?viewport_loc=-567%2C-115%2C3454%2C1686%2C0_0&invitationId=inv_9582b85a-96f6-465f-a9b2-6f4143787be6
