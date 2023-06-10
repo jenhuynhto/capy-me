@@ -298,7 +298,8 @@
               var marker = new google.maps.Marker({
                 position: { lat: entry.lat, lng: entry.long },
                 map: map,
-                title: entry.zoo
+                title: entry.zoo,
+                address: entry.address
               });
               zooMarkers.push(marker);
             });
@@ -315,9 +316,11 @@
             console.log("Distance:", nearestDistance.toFixed(2), "km");
             console.log("Closest Zoo:", nearestMarker.title);
             var spanElement = document.getElementById("closestZoo");
-            spanElement.innerHTML = "The nearest Capybara to you is at:<br>" + nearestMarker.title;
+            spanElement.innerHTML = "The nearest Capybara to you is " + nearestDistance.toFixed(2) + "km away at:<br><br>" 
+            + nearestMarker.title + "<br>" + nearestMarker.address;
             spanElement.style.color = '#0074d9';
             end = nearestMarker.title;
+            console.log(nearestMarker);
 
             var request = {
               origin: start,
