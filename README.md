@@ -80,7 +80,7 @@ After Search
 <img src="apps/onlycapys/static/images/index_after.png" alt="Index Page After Search"/>
 
 ### Our Team
-Insert Our Team img here
+<img src="apps/onlycapys/static/images/ourteam.png" alt="Our Team Page"/>
 
 ### Contact Us
 Before Form Submit
