@@ -71,14 +71,21 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ## Main Pages
 ### Index Page Before & After Search
+Index Page Before Search
 <img src="apps/onlycapys/static/images/index.png" alt="Index Page Before Search"/>
+Index Page After Search
 <img src="apps/onlycapys/static/images/index1.png" alt="Index Page After Search"/>
 
 ### Our Team
 Insert Our Team img here
 
-### Contact Us
-<img src="apps/onlycapys/static/images/contactus.png" alt="Contact Us Page"/>
+### Contact Us Before & After Form Submit
+Contact Us Page Before Form Submit
+<img src="apps/onlycapys/static/images/contactus.png" alt="Contact Us Page Before Form Submit"/>
+Contact Us Page After Form Submit
+<img src="apps/onlycapys/static/images/contactus_submit.png" alt="Contact Us Page After Form Submit"/>
+Contact Us Email Received By (onlycapys@gmail.com)
+<img src="apps/onlycapys/static/images/form_email.png" alt="Contact Us Email Received By (onlycapys@gmail.com)"/>
 
 ### Rate Zoos
 Insert Rate Zoos img here
