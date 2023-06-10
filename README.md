@@ -77,7 +77,7 @@ https://www.figma.com/file/xhpThAoGEcpxTyCfcZVV1n/CSE183---Capybara-Project-Prop
 Before Search
 <img src="apps/onlycapys/static/images/index.png" alt="Index Page Before Search"/>
 After Search
-<img src="apps/onlycapys/static/images/index1.png" alt="Index Page After Search"/>
+<img src="apps/onlycapys/static/images/index_after.png" alt="Index Page After Search"/>
 
 ### Our Team
 Insert Our Team img here
