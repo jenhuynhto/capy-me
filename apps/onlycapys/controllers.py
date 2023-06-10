@@ -67,14 +67,22 @@ def form():
 def form():
     return dict()
 
-@action("zoos")
+@action("zoos", method=["GET", "POST"])
 @action.uses("zoos.html", auth, T)
 def zoo():
-    zoos = db(db.zoo).select(orderby=db.zoo.name)
-    return dict(zoos = zoos)
+    form = Form(db.capyfacts, csruf_session=session, formstyle=FormStyleBulma)
+    if form.accepted:
+        redirect(URL('zoos'))
+    return dict(form=form,
+                get_capyfacts_url = URL('capyfact'))
+
+@action("capyfact", method=["GET", "POST"])
+@action.uses(db, auth.user)
+def facts():
+    facts = db(db.capyfacts).select()
+    print("facts: ", facts)
+    return dict(facts=facts)
 
 
-@action('mytemplate')
-def my_page():
-    return dict()
-    
+
+

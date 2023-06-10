@@ -1,74 +1,11 @@
 [[extend 'layout.html']]
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoos</title>
-    <link rel="stylesheet" href="css/no.css">
-</head>
-<style>
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  padding: 5px;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-.grid-item {
-    text-align: center;
-    padding: 10px;
-    border-radius: 25px;
-    border: 2px solid;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-}
-.heart-button {
-    background-color: #0074d9;
-    transition:0.25s ease;
-}
-.heart-button:hover {
-    background-color: #0068c3;
-}
-.heart-button:active {
-    background-color: red;
-}
-</style>
-
-<div class="section">
-    <div class="title is-size-4" style="margin-left: 15px;">All Known Capybara Zoos</div>
-    <div class="grid-container">
-        [[for zoo in zoos:]]
-        <div class="grid-item">
-            [[=zoo["name"]]]
-            <br>
-            <img src="../static\images\capybara1.png" width="500" height="auto">
-            <button class="heart-button">Like [[=zoo["likes"]]]<i class="fa fa-heart" style="margin-left: 10px;" aria-hidden="true"></i>
-            </button>
-        </div>
-        [[pass]]
-    </div>
+[[=form]]
+<div>
+    hello
 </div>
-
-<!-- <div class="section">
-    Search for Zoo
-    <br><br>
-    [[for zoo in zoos:]]
-    <div class="columns is-mobile">
-        <div class="column is-one-third">
-
-        </div>
-        <div class="column">
-            <div class="box has-text-centered">
-                [[=zoo["name"]]]
-                <br>
-                <button class="button">Like <i class="fa fa-heart" style="margin-left: 10px;" aria-hidden="true"></i>
-                </button>
-            </div>
-        </div>
-        <div class="column">
-        </div>
-    </div>
-    <br>
-    [[pass]]
-</div> -->
-
+[[block page_scripts]]
+<script>
+    let get_capyfacts_url = "[[=XML(get_capyfacts_url)]]";
+</script>
+[[end]]
