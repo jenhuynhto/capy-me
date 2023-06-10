@@ -1,4 +1,4 @@
-timestamp: 2023-05-03T05:09:49.848493
+timestamp: 2023-06-09T23:19:01.503929
 CREATE TABLE "auth_user"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "username" CHAR(512) UNIQUE,
@@ -12,375 +12,34 @@ CREATE TABLE "auth_user"(
     "past_passwords_hash" TEXT
 );
 success!
-timestamp: 2023-05-03T05:09:49.854493
+timestamp: 2023-06-09T23:19:01.510922
 CREATE TABLE "auth_user_tag_groups"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "tagpath" CHAR(512),
-    "record_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  
+    "record_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE ON UPDATE CASCADE  
 );
 success!
-timestamp: 2023-05-23T04:45:14.244250
-CREATE TABLE "contact"(
-    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "fullname" CHAR(512),
-    "email" CHAR(512),
-    "message" CHAR(512)
-);
-success!
-success!
-success!
-timestamp: 2023-06-07T15:42:16.723492
+timestamp: 2023-06-09T23:19:01.596898
 CREATE TABLE "zoo"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "name" CHAR(512),
     "address" CHAR(512),
     "lat" CHAR(512),
-    "long" CHAR(512)
+    "long" CHAR(512),
+    "likes" CHAR(512)
 );
 success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-timestamp: 2023-06-07T19:24:33.968961
-CREATE TABLE "userAddress"(
-    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "address" CHAR(512),
-    "created_on" TIMESTAMP,
-    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
-    "modified_on" TIMESTAMP,
-    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
-    "is_active" CHAR(1)
-);
-success!
-timestamp: 2023-06-07T19:24:33.979952
-ALTER TABLE "zoo" ADD "likes" CHAR(512);
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-timestamp: 2023-06-07T20:48:14.666474
-CREATE TABLE "userAddress"(
-    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "address" CHAR(512),
-    "created_on" TIMESTAMP,
-    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
-    "modified_on" TIMESTAMP,
-    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
-    "is_active" CHAR(1)
-);
-timestamp: 2023-06-07T20:48:55.183239
-CREATE TABLE "userAddress"(
-    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "address" CHAR(512),
-    "created_on" TIMESTAMP,
-    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
-    "modified_on" TIMESTAMP,
-    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
-    "is_active" CHAR(1)
-);
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-timestamp: 2023-06-07T21:12:15.998077
-ALTER TABLE "userAddress" ADD "userid" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ;
-success!
-DELETE FROM "zoo";
-DELETE FROM sqlite_sequence WHERE name='zoo'
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-<<<<<<< Updated upstream
-=======
-timestamp: 2023-06-09T13:48:47.693888
-ALTER TABLE "liked" ADD "zooid" INTEGER REFERENCES "zoo" ("id") ON DELETE CASCADE ON UPDATE CASCADE  ;
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-timestamp: 2023-06-09T14:07:27.530998
-CREATE TABLE "post"(
-    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "user_email" CHAR(512),
-    "post_text" TEXT,
-    "ts" TIMESTAMP
-);
-success!
-success!
-success!
-success!
-success!
-timestamp: 2023-06-09T16:32:42.320959
-CREATE TABLE "followers"(
-    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
-    "follower_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  
-);
-success!
-timestamp: 2023-06-09T16:32:42.331958
-ALTER TABLE "post" ADD "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ;
-timestamp: 2023-06-09T16:32:42.336960
-ALTER TABLE "post" ADD "content" TEXT;
-timestamp: 2023-06-09T16:32:42.341959
-ALTER TABLE "post" ADD "timestamp" TIMESTAMP;
-timestamp: 2023-06-09T16:32:42.347960
-ALTER TABLE "post" ADD "replycount" INTEGER;
-success!
-timestamp: 2023-06-09T16:52:22.184540
-ALTER TABLE "post" ADD "like" INTEGER;
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-timestamp: 2023-06-09T16:59:55.945591
-ALTER TABLE "zoo" ADD "liked" CHAR(512);
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-timestamp: 2023-06-09T17:30:19.891563
+timestamp: 2023-06-09T23:19:01.602891
 CREATE TABLE "capyfacts"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE ON UPDATE CASCADE  ,
+    "username" CHAR(512),
+    "timestamp" TIMESTAMP,
+    "facts" CHAR(512),
+    "created_on" TIMESTAMP,
+    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE ON UPDATE CASCADE  ,
+    "modified_on" TIMESTAMP,
+    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE ON UPDATE CASCADE  ,
+    "is_active" CHAR(1)
 );
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-timestamp: 2023-06-09T17:47:16.286028
-ALTER TABLE "capyfacts" ADD "facts" CHAR(512);
-timestamp: 2023-06-09T17:47:16.291026
-ALTER TABLE "capyfacts" ADD "created_on" TIMESTAMP;
-timestamp: 2023-06-09T17:47:16.296025
-ALTER TABLE "capyfacts" ADD "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ;
-timestamp: 2023-06-09T17:47:16.301025
-ALTER TABLE "capyfacts" ADD "modified_on" TIMESTAMP;
-timestamp: 2023-06-09T17:47:16.306027
-ALTER TABLE "capyfacts" ADD "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ;
-timestamp: 2023-06-09T17:47:16.312026
-ALTER TABLE "capyfacts" ADD "is_active" CHAR(1);
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
->>>>>>> Stashed changes
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-timestamp: 2023-06-09T20:32:50.038589
-ALTER TABLE "capyfacts" ADD "username" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ;
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-timestamp: 2023-06-09T20:49:48.043814
-ALTER TABLE "capyfacts" ADD "timestamp" TIMESTAMP;
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
-success!
 success!
