@@ -93,6 +93,11 @@ Email Received By (onlycapys@gmail.com)
 ### Add CapyFact
 Insert Add CapyFact img here
 
+### Capybara Generator With Fun Fact
+Before Fact
+<img src="apps/onlycapys/static/images/fact.PNG" alt="Contact Us Email Received By (onlycapys@gmail.com)"/>
+After Fact
+<img src="apps/onlycapys/static/images/fact2.PNG" alt="Contact Us Email Received By (onlycapys@gmail.com)"/>
 ## Data Organization
 https://lucid.app/lucidspark/de716b28-e608-43b0-9915-e16e36c45890/edit?viewport_loc=-567%2C-115%2C3454%2C1686%2C0_0&invitationId=inv_9582b85a-96f6-465f-a9b2-6f4143787be6
 
