@@ -316,6 +316,7 @@
             console.log("Closest Zoo:", nearestMarker.title);
             var spanElement = document.getElementById("closestZoo");
             spanElement.innerHTML = "The nearest Capybara to you is at:<br>" + nearestMarker.title;
+            spanElement.style.color = '#0074d9';
             end = nearestMarker.title;
 
             var request = {
@@ -335,6 +336,9 @@
           });
       } else {
         console.log('Geocode was not successful for the following reason: ' + status);
+        var spanElement = document.getElementById("closestZoo");
+        spanElement.innerHTML = "Could not find a Capybara near that address. Try another address?";
+        spanElement.style.color = 'red';
       }
     });
   }
