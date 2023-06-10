@@ -77,10 +77,10 @@ https://www.figma.com/file/xhpThAoGEcpxTyCfcZVV1n/CSE183---Capybara-Project-Prop
 Before Search
 <img src="apps/onlycapys/static/images/index.png" alt="Index Page Before Search"/>
 After Search
-<img src="apps/onlycapys/static/images/index1.png" alt="Index Page After Search"/>
+<img src="apps/onlycapys/static/images/index_after.png" alt="Index Page After Search"/>
 
 ### Our Team
-Insert Our Team img here
+<img src="apps/onlycapys/static/images/ourteam.png" alt="Our Team Page"/>
 
 ### Contact Us
 Before Form Submit
@@ -90,8 +90,8 @@ After Form Submit
 Email Received By (onlycapys@gmail.com)
 <img src="apps/onlycapys/static/images/form_email.PNG" alt="Contact Us Email Received By (onlycapys@gmail.com)"/>
 
-### Rate Zoos
-Insert Rate Zoos img here
+### Add CapyFact
+Insert Add CapyFact img here
 
 ## Data Organization
 https://lucid.app/lucidspark/de716b28-e608-43b0-9915-e16e36c45890/edit?viewport_loc=-567%2C-115%2C3454%2C1686%2C0_0&invitationId=inv_9582b85a-96f6-465f-a9b2-6f4143787be6

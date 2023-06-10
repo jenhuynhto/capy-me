@@ -43,8 +43,8 @@
       <div class="block" style="margin-top: 200px;">
         <h1 class="title is-size-3" style="font-weight: 700;">The Capybara
         </h1>
-        A rodent of unusual size. Is it a beaver without a tail? A hairy pig without a snout?
-        No, it's a capybara, the largest rodent in the world!
+        <p>Behold the capybara, a rodent that slays like no other! 
+          Get ready to meet the world's largest aquatic rodent in all its glory!
         </p>
         <div class="buttons">
           <button class="button" onclick="displayRandomFact()" style="margin-top: 15px;">CapyFact Me <i
@@ -87,14 +87,14 @@
         <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
       </button>
       <br>
-      <div class="title is-size-4">
+      <div class="title is-size-6">
         <span id="closestZoo"></span>
       </div>
 
       <!--fun fact image block -->
-      <div class="block" style="margin-top: 250px;">
-        <img id="fact-image" style="border-radius: 20px; height: 400px; width: auto" class="is-mobile"
-          src="../static/images/capybara1.png" alt="Adult Capybara with 2 Baby Capybara" />
+      <div class="block is-centered" style="margin-top: 250px;">
+        <img id="fact-image" style="border-radius: 20px; height: 400px; width: auto" class="is-mobile" 
+          src="../static/images/capybara1.png" alt="Adult Capybara with 2 Baby Capybara"/>
       </div>
 
     </div>
@@ -298,7 +298,8 @@
               var marker = new google.maps.Marker({
                 position: { lat: entry.lat, lng: entry.long },
                 map: map,
-                title: entry.zoo
+                title: entry.zoo,
+                address: entry.address
               });
               zooMarkers.push(marker);
             });
@@ -315,9 +316,11 @@
             console.log("Distance:", nearestDistance.toFixed(2), "km");
             console.log("Closest Zoo:", nearestMarker.title);
             var spanElement = document.getElementById("closestZoo");
-            spanElement.innerHTML = "The nearest Capybara to you is at:<br>" + nearestMarker.title;
+            spanElement.innerHTML = "The nearest Capybara to you is " + nearestDistance.toFixed(2) + "km away at:<br><br>" 
+            + nearestMarker.title + "<br>" + nearestMarker.address;
             spanElement.style.color = '#0074d9';
             end = nearestMarker.title;
+            console.log(nearestMarker);
 
             var request = {
               origin: start,
