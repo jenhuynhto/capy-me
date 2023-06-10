@@ -19,6 +19,9 @@ import requests
 def get_username():
     return auth.current_user.get('username') if auth.current_user else None
 
+def get_user_email():
+    return auth.current_user.get('email') if auth.current_user else None
+
 try:
     with open('../apps/onlycapys/data/capybara_zoos.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
@@ -36,10 +39,8 @@ db.define_table('zoo',
                 )
 
 db.define_table('capyfacts',
-                Field('user_id', 'reference auth_user', readable=False, writable=False),
-                Field('username', readable=False, writable=False),
-                Field('timestamp', 'datetime',readable=False, writable=False), 
                 Field('facts'),
+                Field('username', default=get_username, readable=False, writable=False),
                 auth.signature,
                 )
 

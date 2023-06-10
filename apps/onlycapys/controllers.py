@@ -68,7 +68,7 @@ def form():
 
 
 @action("zoos", method=["GET", "POST"])
-@action.uses("zoos.html", T)
+@action.uses("zoos.html", db, auth.user, T)
 def zoo():
     
     form = Form(db.capyfacts, csruf_session=session, formstyle=FormStyleBulma)
@@ -84,7 +84,7 @@ def zoo():
 @action("capyfact", method=["GET", "POST"])
 @action.uses(db)
 def facts():
-    facts = db(db.capyfacts).select(orderby=~db.capyfacts.id, limitby=(0, 1))
+    facts = db(db.capyfacts).select(orderby=~db.capyfacts.id)
     
     return dict(facts=facts)
 
