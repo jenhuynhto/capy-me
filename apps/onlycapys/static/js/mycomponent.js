@@ -37,14 +37,15 @@ let init = function () {
 
   self.init = () => {
     // Put here any initialization code.
+   
     axios.get(get_capyfacts_url).then(function (response) {
       self.vue.facts = self.enumerate(response.data.facts);
-      console.log("self.vue.facts: ", self.vue.users);
+      console.log("self.vue.facts: ", self.vue.facts);
     });
 };
-
+  self.init();
   // Put here any initialization code.
-
+  console.log("self.vue.facts")
   return self;
 };
 

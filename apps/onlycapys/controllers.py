@@ -33,6 +33,7 @@ import requests
 from py4web import response
 
 
+
 @action("index",  method=["GET", "POST"])
 @action.uses("index.html", auth, T)
 def index():
@@ -77,7 +78,7 @@ def zoo():
                 get_capyfacts_url = URL('capyfact'))
 
 @action("capyfact", method=["GET", "POST"])
-@action.uses(db, auth.user)
+@action.uses(db)
 def facts():
     facts = db(db.capyfacts).select()
     print("facts: ", facts)
