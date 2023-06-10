@@ -30,8 +30,12 @@ from yatl.helpers import A
 from .common import db, session, T, cache, auth, logger, authenticated, unauthenticated, flash
 from py4web.utils.form import Form, FormStyleBulma
 import requests
+from py4web.utils.url_signer import URLSigner
 from py4web import response
-
+from .models import get_username
+import datetime
+url_signer = URLSigner(session)
+MAX_RETURNED_USERS = 20 # Our searches do not return more than 20 users.
 
 @action("index",  method=["GET", "POST"])
 @action.uses("index.html", auth, T)
@@ -62,27 +66,25 @@ def form():
     return dict()
 
 
-@action("alert")
-@action.uses("Alert.html", auth, T)
-def form():
-    return dict()
 
 @action("zoos", method=["GET", "POST"])
-@action.uses("zoos.html", auth, T)
+@action.uses("zoos.html", T)
 def zoo():
+    
     form = Form(db.capyfacts, csruf_session=session, formstyle=FormStyleBulma)
     if form.accepted:
         redirect(URL('zoos'))
     return dict(form=form,
-                get_capyfacts_url = URL('capyfact'))
+                get_capyfacts_url = URL('capyfact'),
+                add_post_url = URL('add_post'),
+                get_posts_url = URL('get_posts'),  
+                )
+    
 
 @action("capyfact", method=["GET", "POST"])
-@action.uses(db, auth.user)
+@action.uses(db)
 def facts():
-    facts = db(db.capyfacts).select()
-    print("facts: ", facts)
+    facts = db(db.capyfacts).select(orderby=~db.capyfacts.id, limitby=(0, 1))
+    
     return dict(facts=facts)
-
-
-
 
