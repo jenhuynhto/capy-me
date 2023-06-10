@@ -5,3 +5,4 @@ apps/onlycapys/test.py
 apps/onlycapys/.env
 apps/onlycapys/databases
 password.txt
+.DS_Store
