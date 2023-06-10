@@ -70,6 +70,7 @@ _Below is an example of how you can instruct your audience on installing and set
 -->
 
 ## Main Pages
+<img src="index.png" alt="Index Page"/>
 https://www.figma.com/file/xhpThAoGEcpxTyCfcZVV1n/CSE183---Capybara-Project-Proposal?node-id=0%3A88&t=GRIpDimNPT0jz7Yj-1 
 
 ## Data Organization
