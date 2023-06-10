@@ -37,36 +37,25 @@ import datetime
 url_signer = URLSigner(session)
 MAX_RETURNED_USERS = 20 # Our searches do not return more than 20 users.
 
+# Index Page
 @action("index",  method=["GET", "POST"])
 @action.uses("index.html", auth, T)
 def index():
-    #user = auth.get_user()
-    #message = T("Hello {first_name}".format(**user) if user else "Hello")
-    #actions = {"allowed_actions": auth.param.allowed_actions}
-
-    #name = 'capybara'
-    #api_url = 'https://api.api-ninjas.com/v1/animals?name={}'.format(name)
-    #response = requests.get(api_url, headers={'X-Api-Key': 'BvaoaJ22jGIP5JvtVnGW/Q==3Yl87cuMQIHgAN7D'})
-    #if response.status_code == requests.codes.ok:
-    #    print(response.text)
-    #else:
-    #    print("Error:", response.status_code, response.text)
     return dict(form=form)
 
-
+# Our Team Page
 @action("about")
 @action.uses("about.html", auth, T)
 def about():
     return dict( about_us_url = URL('about'))
 
-
+# Contact Us Page
 @action("form", method=["GET", "POST"])
 @action.uses("Forum.html", db, session, T)
 def form():
     return dict()
 
-
-
+#Capy Fact Page
 @action("zoos", method=["GET", "POST"])
 @action.uses("zoos.html", db, auth.user, T)
 def zoo():
@@ -87,4 +76,3 @@ def facts():
     facts = db(db.capyfacts).select(orderby=~db.capyfacts.id)
     
     return dict(facts=facts)
-

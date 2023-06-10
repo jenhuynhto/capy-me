@@ -90,8 +90,8 @@ After Form Submit
 Email Received By (onlycapys@gmail.com)
 <img src="apps/onlycapys/static/images/form_email.PNG" alt="Contact Us Email Received By (onlycapys@gmail.com)"/>
 
-### Add CapyFact
-Insert Add CapyFact img here
+### CapyFact
+<img src="apps/onlycapys/static/images/capyfact.png" alt="Contact Us Page After Form Submit"/>
 
 ### Capybara Generator With Fun Fact
 Before Fact
