@@ -79,9 +79,6 @@ Before Search
 After Search
 <img src="apps/onlycapys/static/images/index_after.png" alt="Index Page After Search"/>
 
-### Our Team
-<img src="apps/onlycapys/static/images/ourteam.png" alt="Our Team Page"/>
-
 ### Contact Us
 Before Form Submit
 <img src="apps/onlycapys/static/images/contactus.png" alt="Contact Us Page Before Form Submit"/>
