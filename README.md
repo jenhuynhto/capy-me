@@ -1,7 +1,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#onlycapys">OnlyCapys</a></li>
+    <li><a href="#onlycapys">CapyMe</a></li>
     <li><a href="#built-with">Built With</a></li>
     <!--
     <li>
@@ -18,8 +18,8 @@
   </ol>
 </details>
 
-## What is OnlyCapys?
-OnlyCapys is a web application that helps users find capybaras near them! Users enter in an address, location, or zip code, and our web application will generate a map of their area, and the location of the closest known capybara location to them. We gather information from a variety of sources, including zoos and verified user submissions, in order to make up our database of known capybara locations.
+## What is CapyMe?
+CapyMe is a web application that helps users find capybaras near them! Users enter in an address, location, or zip code, and our web application will generate a map of their area, and the location of the closest known capybara location to them. We gather information from a variety of sources, including zoos and verified user submissions, in order to make up our database of known capybara locations.
 <br><br>
 Our web application also includes CapyFact and Rate Zoos. CapyFact provides users with randomly generated capybara images and facts. We hope for it to educate users about these fascinating creatures and their habits. Rate Zoos allow users to 'like' zoos to recommend which zoos are worth a visit to other users.
 <br><br>
@@ -84,26 +84,26 @@ Before Form Submit
 <img src="apps/onlycapys/static/images/contactus.png" alt="Contact Us Page Before Form Submit"/>
 After Form Submit
 <img src="apps/onlycapys/static/images/contactus_submit.png" alt="Contact Us Page After Form Submit"/>
-Email Received By (onlycapys@gmail.com)
-<img src="apps/onlycapys/static/images/form_email.PNG" alt="Contact Us Email Received By (onlycapys@gmail.com)"/>
+Email Received By (capyme@gmail.com)
+<img src="apps/onlycapys/static/images/form_email.PNG" alt="Contact Us Email Received By (capyme@gmail.com)"/>
 
 ### CapyFact
 <img src="apps/onlycapys/static/images/capyfact.png" alt="Contact Us Page After Form Submit"/>
 
 ### Capybara Generator With Fun Fact
 Before Fact
-<img src="apps/onlycapys/static/images/fact.PNG" alt="Contact Us Email Received By (onlycapys@gmail.com)"/>
+<img src="apps/onlycapys/static/images/fact.PNG" alt="Contact Us Email Received By (capyme@gmail.com)"/>
 After Fact
-<img src="apps/onlycapys/static/images/fact2.PNG" alt="Contact Us Email Received By (onlycapys@gmail.com)"/>
+<img src="apps/onlycapys/static/images/fact2.PNG" alt="Contact Us Email Received By (capyme@gmail.com)"/>
 ## Data Organization
 https://lucid.app/lucidspark/de716b28-e608-43b0-9915-e16e36c45890/edit?viewport_loc=-567%2C-115%2C3454%2C1686%2C0_0&invitationId=inv_9582b85a-96f6-465f-a9b2-6f4143787be6
 
 ## Usage
-Welcome to OnlyCapys, the premier website for capybara sightings in your area!
+Welcome to CapyMe, the premier website for capybara sightings in your area!
 
-Our website is designed to help you find capybaras near you. To begin, simply enter your location or zip code into the search bar on our homepage. Our system will then generate a map of your area, highlighting any known capybara sightings nearby. The closest zoo will be displayed, along with the distance, route, zoo name, and zoo address. In addition to our mapping system, OnlyCapys also provides a wealth of information about capybaras. Click the CapyFact Me button on our home page, and we'll feature random capybara facts and images that will help you learn more about these fascinating creatures and their habits. You may wonder how we gather data on capybara sightings! We gather information from a variety of sources, including social media platforms, wildlife organizations, and verified user submissions. Through this, we can create a comprehensive map of capybara sightings in your area that is always up-to-date and accurate. The Our Team page of our website displays all of the creators of OnlyCapys. We have a Contact Us page if you'd like to inform us about any additional capybara zoos. In addition, you can also reach us at our email onlycapys@gmail.com. If you'd like to add to our extensive list of capybara facts, you can navigate the CapyFacts page and submit a form, though you may be redirected to create an OnlyCapys account before you can post a fact.
+Our website is designed to help you find capybaras near you. To begin, simply enter your location or zip code into the search bar on our homepage. Our system will then generate a map of your area, highlighting any known capybara sightings nearby. The closest zoo will be displayed, along with the distance, route, zoo name, and zoo address. In addition to our mapping system, CapyMe also provides a wealth of information about capybaras. Click the CapyFact Me button on our home page, and we'll feature random capybara facts and images that will help you learn more about these fascinating creatures and their habits. You may wonder how we gather data on capybara sightings! We gather information from a variety of sources, including social media platforms, wildlife organizations, and verified user submissions. Through this, we can create a comprehensive map of capybara sightings in your area that is always up-to-date and accurate. The Our Team page of our website displays all of the creators of CapyMe. We have a Contact Us page if you'd like to inform us about any additional capybara zoos. In addition, you can also reach us at our email capyme@gmail.com. If you'd like to add to our extensive list of capybara facts, you can navigate the CapyFacts page and submit a form, though you may be redirected to create an CapyMe account before you can post a fact.
 
-Overall, OnlyCapys is the perfect website for anyone who loves capybaras and wants to learn more about these amazing creatures. Whether you are a wildlife enthusiast, photographer, or simply curious about capybaras, our website has everything you need to find and track these gentle giants in your area.
+Overall, CapyMe is the perfect website for anyone who loves capybaras and wants to learn more about these amazing creatures. Whether you are a wildlife enthusiast, photographer, or simply curious about capybaras, our website has everything you need to find and track these gentle giants in your area.
 
 ## User Stories (As a user, I want to...)
 
